@@ -1,30 +1,475 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Ismail Harrando's Personal Website">
+    <meta name="author" content="Harrando Ismail">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/kuro.css" rel="stylesheet">
+
+    <script src="js/analytics.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Ismail Harrando's Personal Website</title>
+  </head>
+
+  <body>
+    <div class="row section" id="landing">
+      <table id="mainmenu">
+        <tr>
+          <td>
+            <div>
+              <div id="menu_logo"></div>
+              <a href="#cv" class="circlelink cvlink scaling1">
+              <i class="circle glyphicon glyphicon-list-alt animate1"></i><br><span>CV</span></a>
+            </div>
+          </td>
+          <td>
+            <div>
+              <a href="#projects" class="circlelink projectslink scaling2">
+              <i class="circle glyphicon glyphicon-send animate2"></i><br><span>Projects</span></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <a href="#raq" class="circlelink raqlink scaling2">
+              <i class="circle glyphicon glyphicon-question-sign animate3"></i><br><span>RAQ</span></a>
+            </div>
+          </td>
+          <td>
+            <div>
+              <a href="#contact" class="circlelink contactlink scaling1">
+              <i class="circle glyphicon glyphicon-comment animate4"></i><br><span>Contact</span></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row section" id="cv">
+      <h1 class="section_header">
+        <a href="#cv" class="toplink toplink1 active"><i class="glyphicon glyphicon-list-alt"></i></a>
+        <a href="#projects" class="toplink toplink1"><i class="glyphicon glyphicon-send animated"></i></a>
+        <a href="#raq" class="toplink toplink1"><i class="glyphicon glyphicon-question-sign animated"></i></a>
+        <a href="#contact" class="toplink toplink1"><i class="glyphicon glyphicon-comment animated"></i></a>
+        <span class="space"></span><span class="section_title"> CV </span>
+        <a href="#landing" class="landing_anchor"></a>
+      </h1>
+      <div class="footnote">Hosted on <a href="pages.github.com">Gihub Pages</a></div>
+      <div class="row" style="margin-top: -20px">
+        <div class="col-sm-6 col-xs-12">
+          <div class="visible-md-block visible-sm-block"><br><br><br></div>
+          <div class="col" style="position: relative">
+            <div class="id_image img-responsive"></div>
+            <div class="visible-md-block visible-sm-block"><br></div>
+            <h2>Personal Info</h2>
+            <table class="personal_info">
+              <tr> <th>Name </th><td>Harrando Ismail</td> </tr>
+              <tr> <th>Age </th><td>22 years old</td> </tr>
+              <tr> <th>Nationality </th><td>Moroccan</td> </tr>
+              <tr> <th>E-Mail </th><td>harrandom (at) gmail.com</td> </tr>
+              <tr>
+                <th>Links </th>
+                <td>
+                  <a href="https://github.com/Siliam">Github</a><br>
+                  <a href="https://www.linkedin.com/in/ismail-harrando">Linkedin</a><br>
+                  <a href="https://www.facebook.com/Harrismatic">Facebook</a></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col">
+            <h2>Education</h2>
+            <table class="education_info">
+              <tr><td class="degree">State Engineering Degree (Ingénieur d'état) in Informatics</td></tr>
+              <tr><td class="option">Information Systems option</td></tr>
+              <tr><td class="school">National School of Applied Science of Tangier</td></tr>
+              <tr><td class="period">2012-2017 (5 years degree)</td></tr>
+              <tr>
+                <td class="extra-info">
+                  <ul>
+                    <li>Top of ‘17 class (180 students) in Engineering</li>
+                    <li>Google Student Ambassador (2014-2015 + 2015-2016)</li>
+                    <li>Computer Science Club Member then Advisor</li>
+                    <li>Organizing Member for the Free Software Day (w/ Richard Stallman)</li>
+                  </ul>
+                </td>
+              </tr>
+
+              <tr><td class="degree">Baccaleaureat Degree</td></tr>
+              <tr><td class="option">Mathematics and Engineering Science option (Sc. Maths B)</td></tr>
+              <tr><td class="school">Lycée Technique Moulay Youssef</td></tr>
+              <tr><td class="period">2009-2012</td></tr>
+              <tr>
+                <td class="extra-info">
+                <ul>
+                    <li>Obtained with Highest Honors <i>("Mention Très Bien")</i></li>
+                </ul>
+                </td>
+              </tr>
+
+              <tr><td class="degree">Online Courses (MOOCs)</td></tr>
+              <tr>
+                <td class="extra-info">
+                <ul>
+                    <li>Stanford : Machine Learning 
+                        (<a href="https://www.coursera.org/account/accomplishments/records/WRNZMGBL8G3K">certificat</a>) - Grade : 100%</li>
+                    <li>Stanford - Algorithms: Design and Analysis, Part 1
+                        (<a href="https://www.coursera.org/maestro/api/certificate/get_certificate?course_id=974416">certificat</a>) - Grade : 93% </li>
+                    <li>MITx - Introduction to CS and Programming Using Python
+                        (<a href="https://s3.amazonaws.com/verify.edx.org/downloads/949be747984b472a8945457b75b4d3cf/Certificate.pdf">certificat</a>)
+                        - Grade : 100%</li>
+                    <li>UC Berkeley - Introduction to Artificial Intelligence (audit only)</li>
+                    <li>EPFL - Introduction à la Programmation Orientée Objet en C++ (audit only)</li>
+                    <li>Harvardx - CS50 : Introduction to Computer Science (audit only)</li>
+                </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      
+        <div class="col-sm-6 col-xs-12">
+          <div class="col">
+            <h2>Internships</h2>
+            <table class="internships_info">
+              <tr><td class="position">Web Developer (Summer internship)</td></tr>
+              <tr><td class="host">Capital Consulting - Casablanca, Morocco</td></tr>
+              <tr><td class="period">July, Augest 2016 (2 months)</td></tr>
+              <tr>
+                <td class="extra-info">
+                <ul>
+                  <li><b>Mission : </b>Designing and implementing a web application for an NGO that promotes education for underprivileged students.</li>
+                  <li><b>Functionalities : </b>Tracking education and career milestones for selected students, keeping records of donations and donors, visualizing overall statistics + landing page.</li>
+                  <li><b>Technologies :</b> Laravel5/PHP, PostgreSQL, Bootstrap,jQuery/JS, HTML/CSS, Heroku, git</li>
+                </td>
+              </tr>
+
+              <tr><td class="position">Lab Intern</td></tr>
+              <tr><td class="host">National School of Applied Science</td></tr>
+              <tr><td class="period">July 2015 (1 month)</td></tr>
+              <tr>
+                <td class="extra-info">
+                <ul>
+                  <li><b>Mission : </b>Comparing numerical methods for Optimization</li>
+                  <li><b>Functionalities : </b>Implementing and measuring performance and error margin for different Optimization methods for solving equations, systems and approximating derivatives numerically.</li>
+                  <li><b>Technologies :</b> HTML/CSS, Javascript, D3.js
+                </td>
+              </tr>
+
+            </table>
+          </div>
+          <div class="col">
+            <h2>Skills</h2>
+            <table class="skills_info">
+              <tr>
+                <th><acronym title="Aritificial Intelligence">AI</acronym> & <acronym title="Data Science">DS</acronym></th>
+                <td>TensorFlow, Scikit-learn, Matlab, R, NLTK, OpenCV, Talend, GraphLab Create</td>
+              </tr>
+              <tr>
+                <th>Programming</th>
+                <td>Python, C#, C++, C, Java, Haskell, Prolog, Lisp, Ruby</td>
+              </tr>
+              <tr>
+                <th>Web</th>
+                <td>HTML5, CSS3, PHP (Laravel, Slim), JS (jQuery, Angular), Node.js, Bootstrap, Socket.io</td>
+              </tr>
+              <tr>
+                <th>Database</th>
+                <td> Oracle (Optimization, Administration, Distribution), MySQL, MongoDB, Neo4j</td>
+              </tr>
+              <tr>
+                <th>Miscellaneous</th>
+                <td>UML, XML, Git, Linux (Bash), Networking, AWS, Latex</td>
+              </tr>
+              <tr>
+                <th></th>
+                <td><br></td>
+              </tr>
+              <tr>
+                <th>Languages</th>
+                <td>English, French and Arabic (Fluent),  German (elementary).</td>
+              </tr>
+              <tr>
+                <th>Other Interests</th>
+                <td>Technology, Blogging, Learning, Reading, Movies, Video Games, Design</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row section" id="projects">
+      <h1 class="section_header">
+        <a href="#cv" class="toplink toplink2"><i class="glyphicon glyphicon-list-alt animated"></i></a>
+        <a href="#projects" class="toplink toplink2 active"><i class="glyphicon glyphicon-send"></i></a>
+        <a href="#raq" class="toplink toplink2"><i class="glyphicon glyphicon-question-sign animated"></i></a>
+        <a href="#contact" class="toplink toplink2"><i class="glyphicon glyphicon-comment animated"></i></a>
+        <span class="space"></span><span class="section_title"> Projects </span>
+        <a href="#landing" class="landing_anchor"></a>
+      </h1>
+      <div id="projects_brief">
+          <h3>Brief 
+            <a class="show_brief"><i class="glyphicon glyphicon-chevron-up"></i></a></h3>
+          <div class="content">
+            <p> In my early days (a.k.a. prior to this summer), I was on my way to become a software developer, since I enjoyed programming and the problem-solving aspect of it. 
+            However, when I learnt that Software engineering, at least here in Morocco, meant deploying <acronym title="Create, Read, Update, Delete">CRUD</acronym> web apps in wholesale fashion, which coincided with me finally mustering enough resolve to finish Stanford's famous "<a href="https://www.coursera.org/learn/machine-learning">Machine Learning</a>" <acronym title="Massive Open Online Course">MOOC</acronym>, the ML bug bit me and now I'm fully fledged ML aficionado.</p>
+            <p>This is just my childhood dream of creating a software "friend" coming back to claim my future (goes to show how gregarious of a kid I was).
+            </p>
+            <p>PS1 : Since Moroccan schools pride themselves in their ability to produce "wholesome, all-around engineers", this section may look like a potpourri.</p>
+            <p>PS2 : If I had $1.000 for every project I didn't finish, I would have, like, at least a $75.000.</p>
+          </div>
+      </div>
+      <div id="projects_section">
+        <div class="projects_category">
+          <h2>
+            Machine Learning 
+            <a class="show_section"><i class="glyphicon glyphicon-upload"></i></a>
+          </h2>
+          <div class="project">
+            <div class="comment">
+              This section is dreadfully lacking, I know. I just got involved with Machine Learning (literally a couple months ago) and there is so many things to learn at once, let alone implement and experiment with. Thus, it will keep seeing updates in the near future.
+            </div>
+            <div class="row">
+              <h3>Project name</h3>
+              <div class="col-sm-9 description">
+                <p>Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.<br>
+                Here lies the description of the project.Here lies the description of the project.<br>
+                Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.<br></p>
+                <p>project.Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.<br></p>
+                <ul>
+                  <li>Point 1</li>
+                  <li>Point 2</li>
+                </ul>
+              </div>
+              <div class="col-sm-3 sidebox">
+                <h3>Keywords :</h3>
+                <p><b>Machine learning</b> <b>Computer vision</b> <b>Classification</b><br></p>
+                <h3>Technologies :</h3>
+                <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+              </div>
+            </div>
+            <div class="row">
+              <h3>Project name</h3>
+              <div class="col-sm-9 description">
+                <p>Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.<br>
+                Here lies the description of the project.Here lies the description of the project.<br>
+                Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.<br></p>
+                <p>project.Here lies the description of the project.Here lies the description of the project.Here lies the description of the project.<br></p>
+                <ul>
+                  <li>Point 1</li>
+                  <li>Point 2</li>
+                </ul>
+                <p>Bla bla bla then image : <br>
+                <p class="text-center"><img src="images/magic_trick.png" class="img-responsive img-thumbnail" width="450"></p>
+                Here lies the description of the project.
+                </p>
+              </div>
+              <div class="col-sm-3 sidebox">
+                <h3>Keywords :</h3>
+                <p><b>Machine learning</b> <b>Computer vision</b> <b>Classification</b><br></p>
+                <h3>Technologies :</h3>
+                <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="projects_category">
+          <h2>
+            Programming 
+            <a class="show_section"><i class="glyphicon glyphicon-upload"></i></a>
+          </h2>
+          <div class="row project">
+            <h2>TBA</h2>
+            <div class="col-sm-9 description">
+              <p>description</p>
+            </div>
+            <div class="col-sm-3 sidebox">
+              <h3>Keywords :</h3>
+              <p><b>Machine learning</b> <b>Computer vision</b> <b>Classification</b><br></p>
+              <h3>Technologies :</h3>
+              <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="projects_category">
+          <h2>
+            Web 
+            <a class="show_section"><i class="glyphicon glyphicon-upload"></i></a>
+          </h2>
+          <div class="row project">
+            <h2>TBA</h2>
+            <div class="col-sm-9 description">
+              <p>description</p>
+            </div>
+            <div class="col-sm-3 sidebox">
+              <h3>Keywords :</h3>
+              <p><b>Machine learning</b> <b>Computer vision</b> <b>Classification</b><br></p>
+              <h3>Technologies :</h3>
+              <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="projects_category">
+          <h2>
+            Other / Coursework
+            <a class="show_section"><i class="glyphicon glyphicon-upload"></i></a>
+          </h2>
+          <div class="row project">
+            <h2>TBA</h2>
+            <div class="col-sm-9 description">
+              <p>description</p>
+            </div>
+            <div class="col-sm-3 sidebox">
+              <h3>Keywords :</h3>
+              <p><b>Machine learning</b> <b>Computer vision</b> <b>Classification</b><br></p>
+              <h3>Technologies :</h3>
+              <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="row section" id="raq">
+      <h1 class="section_header">
+        <a href="#cv" class="toplink toplink3"><i class="glyphicon glyphicon-list-alt animated"></i></a>
+        <a href="#projects" class="toplink toplink3"><i class="glyphicon glyphicon-send animated"></i></a>
+        <a href="#raq" class="toplink toplink3 active"><i class="glyphicon glyphicon-question-sign"></i></a>
+        <a href="#contact" class="toplink toplink3"><i class="glyphicon glyphicon-comment animated"></i></a>
+        <span class="space"></span><span class="section_title"> Rarely Asked Questions
+        <a href="#landing" class="landing_anchor"></a>
+      </h1>
+
+      <div class="row brief">
+
+      </div>
+
+      <div class="row questions">
+      <div class="col-sm-6">
+        <div class="q">
+          <i>What do you want to work on ?</i>
+          <b>Futuristic Artificial Intelligence projects, especially Computer Vision and Natural Language Processing.</b>
+        </div>
+        <div class="q">
+          <i>Why is your Github record so .. white ?</i>
+          <b>I ask myself the same question everyday.</b>
+        </div>
+        <div class="q">
+          <i>Why the logo ?</i>
+          <b>Because this :
+            <p><img src="images/magic_trick.png" class="img-responsive"></p>
+            In case you're wondering, that's my name in Arabic and Latin characters spelled using elements from the logo ("Ismaïl" is what french people pronounce "Isma-eel"). Took me a lot of doodling in class to get, but I'm happy with the result.<br>
+            Fun fact : the mask proportions are based on my actual face! (If you think you know someone's who is more self-absorbed than me please contact me <a href="#contact">here</a>).
+          </b>
+        </div>
+        <div class="q">
+          <i>Favorite things ?</i>
+          <b>Computer Science. MOOCs. Maths (whent they make sense). Lists. Smart people. Secretly envying said smart people for their ability to organize time and prioritize their goals. Python. </b>
+        </div>
+        <div class="q">
+          <i>One picture that captures your person's essence?</i>
+          <b><a href="images/sad_pepe_more_like_everyday_me_amirite.jpg" target="_blank">Glad you asked</a>.</b>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="q">
+          <i>Describe the Moroccan IT scene.</i>
+          <b>PHP and Spring are the most demanded skills. Some people now know what git is. Javascript and jQuery are a "nice plus" on your CV..<br>
+          Basically what the world was like 10 years ago. Which makes interning abroad a realistic equivalent of time travel.</b>
+        </div>
+        <div class="q">
+          <i>Why computer science ?</i>
+          <b>Computers are not unlike children: you feel happy when they get something right, and proud when it's you who taught them how.</b>
+        </div>
+        <div class="q">
+          <i>Your biggest weakness ?</i>
+          <b>Stockholm syndrome/Sentimental attachment to <acronym title="">Windows</acronym>.<br>To a lesser extent, chronic procrastination and the inability to fake enthusiasm.</b>
+        </div>
+        <div class="q">
+          <i>Your biggest strength ?</i>
+          <b><acronym title="and forget them faster">I can learn things really fast</acronym>. I get really passionate about things quickly. I take nothing for granted. I can make bad jokes 24/7.</b>
+        </div>
+        <div class="q">
+          <i>What is your short-term goal ?</i>
+          <b>Making the switch to a more research-oriented career via a cool internship.</b>
+        </div>
+        <div class="q">
+          <i>Long term goal ?</i>
+          <b>Definitely <acronym title="(definitely is *wink*)">not world domination</acronym>.</b>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row section" id="contact">
+      <h1 class="section_header">
+        <a href="#cv" class="toplink toplink4"><i class="glyphicon glyphicon-list-alt animated"></i></a>
+        <a href="#projects" class="toplink toplink4"><i class="glyphicon glyphicon-send animated"></i></a>
+        <a href="#raq" class="toplink toplink4"><i class="glyphicon glyphicon-question-sign animated"></i></a>
+        <a href="#contact" class="toplink toplink4 active"><i class="glyphicon glyphicon-comment"></i></a>
+        <span class="space"></span><span class="section_title"> Contact </span><span class="space"></span>
+        <a href="#landing" class="landing_anchor"></a>
+      </h1>
+
+      <div class="row">
+      <div class="col-md-3 col-sm-2 col-xs-1"></div>
+      <div class="contact_form col-md-6 col-sm-8 col-xs-10">
+      <form id="contactFrom"> 
+        <div class="row class="form-group"">
+          <div class="col-sm-2 col-xs-1"></div>
+          <div class="col-sm-8 col-xs-10"> 
+            <label for="name">Your name : </label>
+            <input id="name" name="name" class="form-control" placeholder="">
+          </div>
+        </div>
+
+        <div class="row class="form-group"">
+          <div class="col-sm-2 col-xs-1"></div>
+          <div class="col-sm-8 col-xs-10"> 
+            <label for="email">Your email : </label>
+            <input id="email" name="email" class="form-control" placeholder="">
+          </div>
+        </div>
+
+        <div class="row class="form-group"">
+          <div class="col-sm-2 col-xs-1"></div>
+          <div class="col-sm-8 col-xs-10"> 
+            <label for="message">Your message : </label>
+            <textarea id="message" name="message" class="form-control" rows="4" ></textarea>
+          </div>
+        </div>
+
+        <div class="row class="form-group"">
+          <div class="col-sm-3 col-xs-2"></div>
+          <div class="col-sm-6 col-xs-8"><input type="submit" name="submit" id="submit" value="Send"> </div>
+        </div>
+        
+        <input type="hidden" name="_subject" value="Email from me !" />
+        <input type="text" name="_gotcha" style="display:none" />
+      </form>
+      </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
 </html>
