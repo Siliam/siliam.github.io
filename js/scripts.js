@@ -5,22 +5,21 @@ $(document).ready(function(){
 	$('.show_brief').click(function(){
 		if($('.show_brief i').hasClass('on'))
 		{
-			$('.show_brief i').removeClass('on');
-			$('.show_brief i').addClass('off');
+			$('.show_brief i').removeClass('on').addClass('off');
 			$('#projects_brief .content').slideUp();	
 		}
 		else
 		{
-			$('.show_brief i').addClass('on');
-			$('.show_brief i').removeClass('off');
+			$('.show_brief i').removeClass('off').addClass('on');
 			$('#projects_brief .content').slideDown();	
 		}
 	});
 
-	$('.show_section').click(function(){
-		$('#projects_section .project').slideUp();
-		var section = $(this).parent().parent();
+	$('.show_section i').click(function(){
+		var section = $(this).parent().parent().parent();
+		var toggled = $(this);
 
+		// Hiding the brief when a show section is toggled
 		if($('.show_brief i').hasClass('on'))
 		{
 			$('.show_brief i').removeClass('on');
@@ -28,17 +27,22 @@ $(document).ready(function(){
 			$('#projects_brief .content').slideUp();	
 		}
 		
-		if($(this).children("i").first().hasClass('on'))
-		{
-			$(this).children('i').first().removeClass('on');
-			$(this).children('i').first().addClass('off');
-			section.children('.project').slideUp();	
+		$('.show_section i').not(toggled).each(function(){
+			if($(this).hasClass('on')){
+				$(this).removeClass('on').addClass('off');
+			}
+		});
+
+		$('#projects_section .project').slideUp();
+
+		if(toggled.hasClass('on')){
+			toggled.removeClass('on').addClass('off');
+			section.children('.project').slideUp();
 		}
 		else
 		{
-			$(this).children('i').first().addClass('on');
-			$(this).children('i').first().removeClass('off');
-			section.children('.project').slideDown();	
+			toggled.addClass('on').removeClass('off');	
+			section.children('.project').slideDown();
 		}
 	});
 
@@ -76,14 +80,14 @@ $(document).ready(function(){
 				data: $(this).serialize(),
 				dataType: 'json',
 				beforeSend: function() {
-					form.children().prop('disabled', true);
+					$('.form-control').prop('disabled', true);
 					form.find('#submit').attr('value', 'Sending ..').removeClass('resend').addClass('sending');
 				},
 				success: function(data) {
-					form.find('#submit').attr('value', 'Sent !').removeClass('sending').addClass('sent');
+					form.find('#submit').attr('value', 'Thank you !').removeClass('sending').addClass('sent');
 				},
 				error: function(err) {
-					form.children().prop('disabled', false);
+					$('.form-control').prop('disabled', false);
 					form.find('#submit').attr('value', 'Resend').removeClass('sending').addClass('resend');
 				}
 			});

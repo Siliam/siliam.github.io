@@ -40,37 +40,12 @@ acronym
 	border-bottom: 1px dashed #888;
 }
 
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
-  
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
-
-.scaling1 {
-	animation: scale-one 3s cubic-bezier(.36,.07,.19,.97) both infinite;
-}
-.scaling2 {
-	animation: scale-two 3s cubic-bezier(.36,.07,.19,.97) both infinite;
-}
 .animate1 {
 	transform: rotate(5deg);
-	animation: animate-one 2s ease both infinite;	
+	animation: animate-one 1s ease both infinite;
 }
 .animate2 {
 	transform : rotate(10deg);
-	box-shadow: 0 0 4px rgba(19,77,153,0.7);
 	animation: animate-two 1.5s linear both infinite;	
 }
 .animate3 {
@@ -82,27 +57,36 @@ acronym
 .animated {
 	animation: animated 2s ease both infinite;	
 }
+.upndown1 {
+	position: relative;
+	bottom: 10px;
+	animation: updown-one 2s cubic-bezier(.36,.07,.19,.97) both infinite;
+}
+.upndown2 {
+	position: relative;
+	bottom: 10px;
+	animation: updown-two 2s cubic-bezier(.36,.07,.19,.97) both infinite;
+}
 
-@keyframes scale-one {
+@keyframes updown-one {
+	0%, 100% { bottom: 10px; }
+	50%  	 { bottom: -10px; }
+}
+@keyframes updown-two {
+	0%, 100% { bottom: -10px; }
+	50%  	 { bottom: 10px; }
+}
+@keyframes scale {
 	0%	 	{ transform: scale(0.95); }
 	50% 	{ transform: scale(1.05); }
 	100% 	{ transform: scale(0.95); }
 }
-@keyframes scale-two {
-	0%	 	{ transform: scale(1.05); }
-	50% 	{ transform: scale(0.95); }
-	100% 	{ transform: scale(1.05); }
-}
 @keyframes animate-one {
-	0%	 	{ box-shadow: 0 0 4px  rgba(64,19,153,0.7); }
+	0%	 	{ box-shadow: 0 0 6px rgba(64,19,153,0.7); }
 	25%		{ transform: rotate(-5deg);  }
 	50% 	{ box-shadow: 0 0 10px rgba(64,19,153,1); }
 	75%		{ transform: rotate(5deg); }
-	100% 	{ box-shadow: 0 0 4px  rgba(64,19,153,0.7); }
-}
-@keyframes animated {
-	25%		{ transform: rotate(-10deg);  }
-	75%		{ transform: rotate(10deg); }
+	100% 	{ box-shadow: 0 0 6px rgba(64,19,153,0.7); }
 }
 @keyframes animate-two {
 	0%	 	{ box-shadow: 0 0 4px rgba(19,77,153,0.7); transform: rotate(-10deg); }
@@ -123,6 +107,10 @@ acronym
 	80% 	{ box-shadow: 0 0 4px rgba(153,63,19,0.8); transform: rotate(-30deg);}
 	90% 	{ box-shadow: 0 0 4px rgba(153,63,19,0.8); transform: rotate(30deg);}
 	100% 	{ transform: rotate(0deg);}
+}
+@keyframes animated {
+	25%		{ transform: rotate(-10deg);  }
+	75%		{ transform: rotate(10deg); }
 }
 
 .row
@@ -178,20 +166,27 @@ acronym
 
 #mainmenu
 {
-	width: 600px;
-	height: 460px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -230px 0 0 -300px;
-	background: url('../images/logo_animated.gif') no-repeat;
-	background-position: 210px 130px;
+	width: 100%;
+	height: 60%;
+	margin-top: 10%;
 	text-align: center;
+}
+#mainmenu .logo-line
+{
+	margin: 20px 0;
+}
+#mainmenu .logo-line img
+{
+	display: block;
+	margin: auto;
 }
 
 a.circlelink
 {
 	display: block;
+	width: 140px;
+	height: 140px;
+	margin: auto;
 }
 
 a.circlelink:hover span
@@ -204,6 +199,13 @@ a.circlelink:hover i
 	font-size: 80px;
 }
 
+a.circlelink span
+{
+	position: relative;
+	z-index: 2;
+	font-size: 25px;
+}
+
 .circlelink:hover.circle
 {
 	font-size: 80px;
@@ -211,10 +213,7 @@ a.circlelink:hover i
 
 .circlelink span
 {
-	display: block;
 	text-align: center;
-	color: black;
-	width: 160px;
 	height: 40px;
 	text-align: center;
 	font-size: 30px;
@@ -224,12 +223,12 @@ a.circlelink:hover i
 
 .circle
 {
-	width: 160px;
-	height: 160px;
+	width: 140px;
+	height: 140px;
 	text-align: center;
 	color: white; 
 	font-size: 70px;
-	line-height: 160px;
+	line-height: 140px;
 	background: black;
 	padding: 0px;
     -moz-border-radius: 50%;
@@ -237,16 +236,16 @@ a.circlelink:hover i
     border-radius: 50%
 }
 
+a.cvlink span
+{
+	color: #401299;
+}
+
 .cvlink .circle
 {
 	background: #401399;
 	padding-right: 10px;
 	box-shadow: 0 0px 8px rgba(64,19,153,0.8);
-}
-
-a.cvlink span
-{
-	color: #401399;
 }
 
 .projectslink .circle
@@ -288,6 +287,16 @@ a.contactlink span
 	padding-left: 20px;
 	margin-top: 0px;
 }
+.stack
+{
+	display: block;	
+	margin: auto;
+}
+.col-stack
+{
+	display: block;
+	height: 190px;
+}
 
 .toplink i
 {
@@ -309,7 +318,6 @@ a.contactlink span
 	font-size: 35px;
 	line-height: 50px;
 }
-
 
 .toplink.active i
 {
@@ -350,6 +358,7 @@ a.contactlink span
 	display: inline-block;
 	width: 20px;
 }
+
 
 .footnote
 {
@@ -493,9 +502,26 @@ a.contactlink span
 	height: 50px;
 	background: url('../images/logo_icon.png') center center no-repeat;
 	float: right;
-	position: relative;
-	top: -20px;
-	right: -20px;
+	margin: -20px -20px 0 0;
+} 
+
+@media (min-width: 0px) and (max-width: 800px) {
+	.col-stack .circlelink 
+	{
+		width: 100px;
+		height: 100px;	
+	}
+	.stack .col-xs-6
+	{
+		width: 25%;
+	}
+	.col-stack .circlelink i
+	{
+		width: 100px;
+		height: 100px;
+		font-size: 42px;
+		line-height: 100px;
+	}
 }
 
 #projects
@@ -674,7 +700,7 @@ a.contactlink span
 }
 #raq .questions .q p
 {
-	width: 60%;
+	width: 90%;
 	margin: auto;
 }
 #raq .questions i, #raq .questions b  /* shorthand for questions and answers, respectively */
