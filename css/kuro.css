@@ -246,6 +246,7 @@ a.cvlink span
 	background: #401399;
 	padding-right: 10px;
 	box-shadow: 0 0px 8px rgba(64,19,153,0.8);
+	padding-left: 4px;
 }
 
 .projectslink .circle
@@ -253,6 +254,7 @@ a.cvlink span
 	background: #134d99;
 	padding-right: 15px;
 	box-shadow: 0 0px 8px rgba(19,77,153,0.8);
+	padding-left: 4px;
 }
 
 a.projectslink span
@@ -510,6 +512,10 @@ a.contactlink span
 	{
 		width: 100px;
 		height: 100px;	
+	}
+	.col-stack .circlelink:hover i
+	{
+		font-size: 55px;
 	}
 	.stack .col-xs-6
 	{
