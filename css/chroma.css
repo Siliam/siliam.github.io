@@ -440,12 +440,16 @@ a.contactlink span
 {
 	list-style: none;
 }
-#cv .education_info .extra-info ul li:before {
-    content: "♦ ";
-    font-size: 14px;
-    color: #124d99;
+#cv .education_info .extra-info ul li
+{
+	font-weight: normal;
+	font-size: 14px;
+	color: #111;
 }
-
+#cv .education_info .extra-info ul li b
+{
+	color: #888;
+}
 
 #cv .internships_info .position
 {
@@ -609,6 +613,11 @@ a.contactlink span
 	margin: 20px 0 10px;
 	padding: 30px;
 }
+#projects #projects_section .project .row
+{
+	margin-bottom: 20px;
+}
+
 #projects #projects_section .project h3
 {
 	font-weight: bold;
@@ -649,8 +658,18 @@ a.contactlink span
 	font-size: 16px;
 }
 #projects #projects_section .description ul li:before {
-    content: "♦ ";
+    content: "○ ";
     color: #124d99;
+    position: relative;
+    left: -5px;
+    top: -1px;
+}
+#projects #projects_section .description ul.no-bullets li:before {
+	content: "";
+}
+#projects #projects_section .description .no-bullets .glyphicon {
+	position: relative;
+	right: 10px;
 }
 #projects #projects_section .comment
 {
@@ -659,6 +678,7 @@ a.contactlink span
 	padding: 20px;
 	background: rgba(19,77,153, 0.1);
 	border-radius: 8px;
+	margin-bottom: 20px;
 }
 #projects #projects_brief .on
 {
@@ -724,7 +744,7 @@ a.contactlink span
 #raq .questions .q a
 {
 	color: white;
-	border-bottom: 1px dashed #c22859;
+	border-bottom: 1px dashed #e15481;
 }
 
 #raq .questions i

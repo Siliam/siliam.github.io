@@ -15,29 +15,45 @@ $(document).ready(function(){
 		}
 	});
 
+
 	$('.show_section i').click(function(){
 		var section = $(this).parent().parent().parent();
 		var toggled = $(this);
+		var displayed;
 
 		// Hiding the brief when a show section is toggled
 		if($('.show_brief i').hasClass('on'))
 		{
-			$('.show_brief i').removeClass('on');
-			$('.show_brief i').addClass('off');
+			$('.show_brief i').removeClass('on').addClass('off');
 			$('#projects_brief .content').slideUp();	
 		}
 		
-		$('.show_section i').not(toggled).each(function(){
+		$('.show_section i').each(function(){
 			if($(this).hasClass('on')){
-				$(this).removeClass('on').addClass('off');
+				// $(this).removeClass('on').addClass('off');
+				displayed = $(this);
+				displayedSection = displayed.parent().parent().parent().children(".project");
 			}
 		});
 
-		$('#projects_section .project').slideUp();
-
-		if(toggled.hasClass('on')){
-			toggled.removeClass('on').addClass('off');
-			section.children('.project').slideUp();
+		if(displayed)
+		{
+			displayed.removeClass('on').addClass('off');
+			if(displayed.attr('id') != toggled.attr('id'))
+			{
+				var t1 = $(displayedSection).offset().top, t2 = $(section).offset().top;
+				var scrollTo = ((t1 < t2) ? t1 : t2) - 20;
+				$('html, body').animate({ scrollTop: scrollTo}, 200, "swing");
+				displayedSection.slideUp(200, function(){
+					toggled.addClass('on').removeClass('off');	
+					section.children('.project').slideDown();
+				});
+			}
+			else
+			{
+				toggled.removeClass('on').addClass('off');
+				section.children('.project').slideUp();
+			}
 		}
 		else
 		{
