@@ -171,11 +171,11 @@
             <table class="skills_info">
               <tr>
                 <th><acronym title="Aritificial Intelligence">AI</acronym> & <acronym title="Data Science">DS</acronym></th>
-                <td>Matlab, OpenCV, R, TensorFlow, Scikit-learn, NLTK, Knime</td>
+                <td>Matlab, OpenCV, R, TensorFlow, Scikit-learn, Numpy, NLTK</td>
               </tr>
               <tr>
                 <th>Programming</th>
-                <td>Python, C, C++, C#, Java, Haskell, Prolog, Common Lisp</td>
+                <td>Python, C++, C#, C, Java, Haskell, Prolog, Common Lisp</td>
               </tr>
               <tr>
                 <th>Web</th>
@@ -198,7 +198,7 @@
                 <td>English, French and Arabic (Fluent),  German (elementary).</td>
               </tr>
               <tr>
-                <th>Other Interests</th>
+                <th>Interests</th>
                 <td>Technology, Blogging, Learning, Video Games, Reading, Movies ..</td>
               </tr>
             </table>
@@ -245,14 +245,14 @@
                 <p>Implementing a Machine Learning system to recognize handwritten characters from scanned / photographed pages.</p>
                 <p>Experimenting with :
                 <ul>
-                  <li>Neural Networks (<acronym title="Convolutional Neural Networks">CNNs</acronym>, maybe ?)</li>
+                  <li>Neural Networks</li>
                   <li>KNN</li>
                   <li>SVM</li>
                 </ul>
                 </p>
                 <p>The ML algorithms used are implemented from scratch in C++.</p>
                 <p>User Interface : 
-                  <a href="images/projects/ocr_gui.png" target="_blank"><span class="glyphicon glyphicon-picture"></span></a></p>
+                    <a href="images/projects/ocr_gui.png" target="_blank"><span class="glyphicon glyphicon-picture"></span></a></p>
                 <p> I also created a tool <a href="images/projects/idsg.png" target="_blank"><span class="glyphicon glyphicon-picture"></span></a> to generate image datasets, i.e. to handle extracting and resizing portion of raw images to get labeled, more manageable data. It's especially handy for extracting characters from pages of text containing full sentences, which happen to be the case for all <a href="http://www.cs.nott.ac.uk/~pszcah/Databases.htm">Arabic handwriting datasets</a> that I could find.</p>
                 <p>The tool is also written in C++ using Qt and OpenCV for handling and resizing the output (<a href="https://github.com/Siliam/ImageDatasetGenerator">Github</a>).</p>
               </div>
@@ -261,6 +261,48 @@
                 <p><b>Machine learning</b> <b>Computer vision</b> <b>Classification</b><br></p>
                 <h3>Technologies :</h3>
                 <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <h3>Sentiana</h3>
+              <div class="col-sm-9 description">
+                <p>SENTIment ANAlysis for Facebook statuses (using reaction data : Love, Wow, Haha, Sad, Angry).<br>
+                Used the Naive Bayesian classifier with Python's NLTK.</p>
+                <p>Developing a web interface to visualize each class probability as well as dominantly sentimental words (words with high correlation with certain classes).</p>
+                <p>Work in progress : adding bigram support, using WordNet for some extra precision.</p>
+                <p>Dataset source : <a href="https://github.com/minimaxir/facebook-page-post-scraper" target="_blank">here</a><br>
+                Code : <i>coming soon</i></p>
+              </div>
+              <div class="col-sm-3 sidebox">
+                <h3>Keywords :</h3>
+                <p><b>Sentiment Analysis</b> <b>Naive Bayes</b> <b>Natural Language Processing</b><br></p>
+                <h3>Technologies :</h3>
+                <p><b>Python</b> <b>NLTK</b></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <h3>Malin</h3>
+              <div class="col-sm-9 description">
+                <p>Malin is a GUI for MAchine LearnINg algorithms.</p>
+                <p>The goal is to develop an interface that is easy to use and interact with, thus simplifying prototyping a quick ML model, while having access to the same parameters as one does when working with a scripting language (minus the scripting part) The algorithms in question are implemented from scratch.<br>Implemented in C++ and Qt.</p>
+                <p>The application is *far* from complete, and for now only supports : 
+                <ul>
+                  <li>Linear Regression</li>
+                  <li>Logistic Regression</li>
+                  <li>K-Nearest Neighbors</li>
+                  <li>Input files in CSV</li>
+                </ul>
+                </p>
+                <p>Code and screenshots : <a href="https://github.com/Siliam/Malin">Github</a></p>
+                <p><i>PS : "Malin" is French for smart, clever and witty. </i></p>
+              </div>
+              <div class="col-sm-3 sidebox">
+                <h3>Keywords :</h3>
+                <p><b>Machine Learning</b> <b>Model Prototyping Interface</b><br></p>
+                <h3>Technologies :</h3>
+                <p><b>C++</b> <b>Qt</b></p>
               </div>
             </div>
 
@@ -293,7 +335,7 @@
         
         <div class="projects_category">
           <h2>
-            CS / Programming / Web
+            Programming / Web
             <a class="show_section"><i class="glyphicon glyphicon-upload" id="i2"></i></a>
           </h2>
           <div class="project">
@@ -301,6 +343,7 @@
               <p>This section will not include the myriad of CRUD apps that we mass-produce for every programming / software engineering class.</p>
               <p>Instead, I'll try to only feature the less trivial ones that I enjoyed making.</p>
             </div>
+
 
             <div class="row">
               <h3>Image Processing & Computer Vision</h3>
@@ -329,6 +372,47 @@
                 <p><b>C++</b> <b>OpenCV</b> <b>Visual Studio</b><br></p>
               </div>
             </div>
+
+
+
+            <div class="row">
+              <h3>Fingertracker</h3>
+              <div class="col-sm-9 description">
+                <p>A simple interactive interface that tracks finger movements (using special colored rings) to detect basic gestures.</p>
+                <p>The user can choose the color and number of colors to track, and link specific tasks (following the trail, writing, drawing ..) to specific gestures.</p>
+                <p>The code (and screenshots) is in <a href="https://github.com/Siliam/fingertracker">Github</a>.</p>
+              </div>
+              <div class="col-sm-3 sidebox">
+                <h3>Keywords :</h3>
+                <p><b>Computer Vision</b> <b>Wireless interface</b> <b>HCI</b><br></p>
+                <h3>Technologies :</h3>
+                <p><b>C++</b> <b>OpenCV</b> <b>Qt</b><br></p>
+              </div>
+            </div>
+            <div class="row">
+              <h3>A Project Management Application in Java</h3>
+              <div class="col-sm-9 description">
+                <p>TeamPro is a Project Management Application that can be used to share information, files and important dates between team members. Users can : 
+                <ul>
+                  <li>Create a new project / join an existing project</li>
+                  <li>Add members to the project's team</li>
+                  <li>Chat in real time with the other members</li>
+                  <li>Add tasks to the To Do list that defines the overall progress in the project</li>
+                  <li>Add events and milestones to the project calendar</li>
+                  <li>Share files within the project's group</li>
+                </ul></p>
+                <p>The user interface (<a href="images/projects/teampro_ui.jpg" target="_blank"><span class="glyphicon glyphicon-picture"></span></a>) is based on Swing and is personalizable via themes.</p>
+                <p>A calendar widget has been developped from scratch to add the abiliy to interact directly with it to add, update or remove events.</p>
+              </div>
+              <div class="col-sm-3 sidebox">
+                <h3>Keywords :</h3>
+                <p><b>Project Management Application</b><br></p>
+                <h3>Technologies :</h3>
+                <p><b>Java</b> <b>Swing</b> <b>OkHttp</b> <b>MongoDB</b> <b>Node.js</b> <b>Socket.io</b><br></p>
+              </div>
+            </div>
+            
+
             <div class="row">
               <h3>A Project Management Application in Java</h3>
               <div class="col-sm-9 description">
@@ -502,8 +586,7 @@
         </div>
         <div class="q">
           <i>Why don't you share the code of all your projects ?</i>
-          <b>Back when I started programming, I would write (and take pride in writing) hundreds of lines of vanilla code that could be reduced into 2 lines with the proper tool/framework.. but it didn't matter as long as Things Just Worked. Things are different now and <acronym title="Obvious cop-out is obvious">I'd rather look forward than look back!</acronym><br>
-          Also, some projects are now somehow broken or just .. lost? because who needs Github amirite.</b>
+          <b>Back when I started programming, I would write (and take pride in writing) hundreds of lines of vanilla code that could be reduced into 2 lines with the proper tool/framework.. but it didn't matter as long as Things Just Worked. Things are different now and <acronym title="Obvious cop-out is obvious">I'd rather look forward than look back!</acronym></b>
         </div>
         <div class="q">
           <i>Favorite things ?</i>
