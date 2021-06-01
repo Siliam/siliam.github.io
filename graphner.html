@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Ismail Harrando's Personal Website - Projects">
+    <meta name="author" content="Harrando Ismail">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/chroma.css" rel="stylesheet">
+    <script src="js/analytics.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Named Entity Recognition as Graph Classification - ESWC 2021 submission</title>
+  </head>
+
+  <body>
+    <div class="row section" id="projects">
+      <h1 class="section_header">
+        <a href="index.html" class="landing_anchor shaking"></a>
+        <a href="#projects" class="toplink toplink2 active"></a>
+        <span class="space"></span><span class="section_title"> Named Entity Recognition as Graph Classification </span>
+      </h1>
+      <div id="projects_brief">
+          <h3>Abstract 
+            <a class="show_brief"><i class="glyphicon glyphicon-chevron-up"></i></a></h3>
+          <div class="content">
+            <p> Injecting real-world information (typically contained in Knowledge Graphs) and human expertise into an end-to-end training pipeline for Natural Language Processing models is an open challenge. In this preliminary work, we propose to approach the task of Named Entity Recognition, which is traditionally viewed as a <i>Sequence Labeling</i> problem, as a <i>Graph Classification</i> problem, where every word is represented as a node in a graph. This allows to embed  contextual information as well as other external knowledge relevant to each token, such as gazetteer mentions, morphological form, and linguistic tags. We experiment with a variety of graph modeling techniques to represent words, their contexts, and external knowledge, and we evaluate our approach on the standard CoNLL-2003 dataset. We obtained promising results when integrating external knowledge through the use of graph representation in comparison to the dominant end-to-end training paradigm. </p>
+          </div>
+      </div>
+      <div id="projects_section">
+        <div class="projects_category">
+          <h2>
+            In one illustration 
+            <a class="show_section"><i class="glyphicon glyphicon-upload" id="i1"></i></a>
+          </h2>
+          <div class="project">
+          	<div  style="text-align:center">
+          		<img src="images/graphner_pipeline.png" alt="The GraphNER pipeline"/>
+          	</div>
+          </div>
+        </div>
+        
+        <div class="projects_category">
+          <h2>
+            Results
+            <a class="show_section"><i class="glyphicon glyphicon-upload" id="i2"></i></a>
+          </h2>
+          <div class="project">
+            <div class="comment">
+              <p>This table shows the empirical results obtained by each method on the CoNLL-2003 dataset. We observe a significant decrease in performance for all models be-tween the evaluation and test sets (with a varying intensity depending on thechoice of the model) that is probably due to the fact that the test set containsa lot of out-of-vocabulary words that do not appear in the training set. Thus,they  lack  a  node  representation  that  we  can  feed  to  the  network  in  inferencetime. We also see that adding the external knowledge consistently improve theperformance of the graph models on both Micro-F1 and Macro-F1 for all mod-els considered. Finally, while the performance on the test set for all graph-onlymodels is still behind LUKE, the best performing state of the art NER modelon ConLL 2003, we observe that these models are significantly smaller and thusfaster  to  train  (in  matters  of  minutes  once  the  graph  embeddings  are  gener-ated),  when  using  a  simple  2-layers  feed-forward  neural  as  a  classifier.  Thesepreliminary results show promising directions for additional investigations andimprovements</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts-projects.js"></script>
+
+  </body>
+</html>
