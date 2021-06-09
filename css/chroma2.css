@@ -871,3 +871,18 @@ a.contactlink span
 	border-color: #5d0e0e;
 	box-shadow: 0px 0px 3px rgba(95,15,15, 0.4);
 }
+
+.links
+{
+	margin-left: 60px;
+	margin-bottom: -5px;
+}
+
+.links a
+{
+	/* font-weight: bold; */
+	font-size: 1.1em;
+	color: #abe0ff;
+	text-decoration: underline;
+	text-decoration-color: #88a9d1;
+}

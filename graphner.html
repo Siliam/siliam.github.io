@@ -10,6 +10,8 @@
 
     <link rel="icon" href="images/favicon.ico">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/chroma2.css" rel="stylesheet">
     <script src="js/analytics.js"></script>
@@ -22,30 +24,36 @@
     <title>Named Entity Recognition as Graph Classification - ESWC 2021 submission</title>
   </head>
 
-  <body>
     <div class="row section" id="projects">
       <h1 class="section_header">
         <a href="index.html" class="landing_anchor shaking"></a>
-        <a href="#projects" class="toplink toplink2 active"></a>
+        <a href="https://2021.eswc-conferences.org/"><img src="images/eswc-logo.png" width="150px" style="float:right"></a>
         <span class="space"></span><span class="section_title"> Named Entity Recognition as Graph Classification </span>
+        <h3 class="links"><br>By <a href="https://twitter.com/harrrando">Ismail Harrando <i class="fa fa-twitter"></i></a> and <a href="https://twitter.com/rtroncy">Raphaël Troncy <i class="fa fa-twitter"></i></a> (emails: lastname@eurecom.fr)
+        </h3>
+        <h3 class="links">Link to the paper : <a href="https://openreview.net/forum?id=QA_Ttxv9WfG">OpenReview <i class="fa fa-copy"></i></a>
+        <a href="https://eurecom.fr/"><img src="images/eurecom-logo.png" width="200px" style="float:right"></a>
+          </h3>
+        <h3 class="links">Project Github Repo : <a href="https://github.com/D2KLab/GraphNER">D2KLab/GraphNER <i class="fa fa-github"></i></a></h3>
+
       </h1>
       <div id="projects_brief">
           <h3>Motivation </h3>
           <div>
-            <p style="font-size: 25px;"> Injecting real-world information (typically contained in Knowledge Graphs) and human expertise into an end-to-end training pipeline for Natural Language Processing models is an open challenge. In this preliminary work, we propose to approach the task of Named Entity Recognition, which is traditionally viewed as a <i>Sequence Labeling</i> problem, as a <i>Graph Classification</i> problem, where every word is represented as a node in a graph. This allows to embed  contextual information as well as other external knowledge relevant to each token, such as gazetteer mentions, morphological form, and linguistic tags. We experiment with a variety of graph modeling techniques to represent words, their contexts, and external knowledge, and we evaluate our approach on the standard CoNLL-2003 dataset. We obtained promising results when integrating external knowledge through the use of graph representation in comparison to the dominant end-to-end training paradigm. </p>
+            <p style="font-size: 25px;"> Injecting real-world information (typically contained in Knowledge Graphs) and human expertise into an end-to-end training pipeline for Natural Language Processing models is an open challenge. In this preliminary work, we propose to approach the task of Named Entity Recognition, which is traditionally viewed as a <i>Sequence Labeling</i> problem, as a <i>Graph Classification</i> problem, where every word is represented as a node in a graph. This allows to embed  contextual information as well as other external knowledge relevant to each token, such as gazetteer mentions, morphological form, and linguistic tags. We experiment with a variety of graph modeling techniques to represent words, their contexts, and external knowledge, and we evaluate our approach on the <a href="https://www.clips.uantwerpen.be/conll2003/ner/" style="text-decoration-color: #ffffff66">standard CoNLL-2003 dataset</a>. We obtained promising results when integrating external knowledge through the use of graph representation in comparison to the dominant end-to-end training paradigm. </p>
           </div>
       </div>
       <div id="projects_section">
 
         <div class="projects_category">
           <h2>
-            In one illustration 
+            In one figure 
           </h2>
           <div class="project">
             <div  style="text-align:center">
-              <img src="images/graphner_pipeline.png" alt="The GraphNER pipeline"/>
+              <img src="images/graphner_pipeline.png" alt="The GraphNER pipeline"/><br><br>
             </div>
-            <div style="text-align:center; color:#333">
+            <div style="text-align:justify; color:#333">
               NER as graph classification: instead of the traditional sequence tagging model (left), we propose to treat each word in a sentence as a graph where the word toclassify is linked to the words from its context, as well as other task related featuressuch as grammatical properties (in green), gazetteers mentions (in yellow) and task-specific hand-written features (in blue). The graph is turned into a fixed-length vector representation which is then passed to a classifier to predict the word label.
             </div>
           </div>
@@ -58,12 +66,12 @@
           <div class="project" style="font-size: 0.8em">
             <div>
               <h3 style="font-size: 30px">Grammatical tags</h3>
-              <p>We  use  the  Part  of  Speech  tags  (POS)  e.g.  ‘Noun’, ‘Verb’, ‘Adjective’, as well as the shallow parsing tags (chunking) e.g. ‘Verbal Phrase’, ‘Subordinated Clause’ etc.</p>
+              <p>We  use  the  Part  of  Speech  tags  (POS)  e.g.  ‘Noun’, ‘Verb’, ‘Adjective’, as well as the shallow parsing tags (chunking) e.g. ‘Verbal Phrase’, ‘Subordinated Clause’ etc. We use the manual annotations provided with the CoNLL dataset, however, it is possible to use off-the-shelf models to annontate data as <a href="http://nlpprogress.com/english/part-of-speech_tagging.html">state-of-the-art POS tagging approaches</a> are are very close to human performance (especially on English).</p>
               <h3 style="font-size: 30px">Letter case</h3>
               <p>The presence of uppercase letters usually signify that a word refers to an entity. We thus add the following tags: ‘Capitalized’ if the word starts with a capital letter, ‘All Caps’ if the word is made of only uppercase letters, and ‘Acronym’ if the word is a succession of uppercase letters and periods.</p>
               <h3 style="font-size: 30px">Gazetteers</h3>
               <p>We generate lists of words that are related to potential entity types such as “Person First Name” and “Capital”.</p>
-              <p> To  do  so,  we  selected  14  classes  from  the  Wikidata  Knowledge  Base  that correspond to some of the entity classes (see table below) and used the public SPARQL endpoint to generate the gazetteers. For each of these classes, we query Wiki-data  for  all  entities  belonging  to  that  class,  a  direct  subclass  of  it,  or  a  sub-class of a subclass of it (going any further made the queries much slower and yielded diminishing returns). For each entity, we get all English labels associated  with  it  (from  the  properties rdfs:label, skos:altLabel)  and  keep  the labels containing only one word. When creating the input graph, if the central node’s  word  appear  in  one  of  the  gazetteers,  we  attach  it  to  the  appropriate tag, i.e. if the central node stands for the word “Ford”, it will be attached tothe nodes ‘family name’ (wd:Q11247279), ‘car brand’ (wd:Q44294), ‘male given name’ (wd:Q21021650) and so on. Because  of  the  high  number  of  subclasses  for  each  category,  we  only  keep the top category information for each label when using these gazetteers for ourexperiments.</p>
+              <p> To  do  so,  we  selected  14  classes  from  the  Wikidata  Knowledge  Base  that correspond to some of the entity classes (see table below) and used the public SPARQL endpoint to generate the gazetteers. For each of these classes, we query Wiki-data  for  all  entities  belonging  to  that  class,  a  direct  subclass  of  it,  or  a  sub-class of a subclass of it (going any further made the queries much slower and yielded diminishing returns). For each entity, we get all English labels associated  with  it  (from  the  properties <b>rdfs:label</b>, <b>skos:altLabel</b>)  and  keep  the labels containing only one word. When creating the input graph, if the central node’s  word  appear  in  one  of  the  gazetteers,  we  attach  it  to  the  appropriate tag, i.e. if the central node stands for the word “Ford”, it will be attached tothe nodes ‘family name’ (wd:Q11247279), ‘car brand’ (wd:Q44294), ‘male given name’ (wd:Q21021650) and so on. Because  of  the  high  number  of  subclasses  for  each  category,  we  only  keep the top category information for each label when using these gazetteers for our experiments. The code to generate these gazetteers can be <a href="https://github.com/D2KLab/GraphNER/blob/main/final_generate_gazetteers.ipynb">found here</a>. <br><br></p>
 
               <table class="table">
               <tr>
@@ -122,7 +130,7 @@
             Graph representations 
           </h2>
           <div class="project">
-            <p>The literature on graph representations is extremely diverse and rich. For our experiments, we chose a representative algorithm from each big "family": a shallow neural auto-encoder, Node2Vec (node embeddings), TransE (entity embeddings), and a Graph Convolution Network (inpired by <a href='https://github.com/rusty1s/pytorch_geometric/blob/master/examples/proteins_topk_pool.py'>this architecture</a>). We also train a two-layers neural network on a simple binary embedding of graph nodes as a baseline.</p>
+            <p>The literature on graph representations is extremely diverse and rich. For our experiments, we chose a representative algorithm from each big "family": a shallow neural auto-encoder, Node2Vec (node embeddings), TransE (entity embeddings), and a Graph Convolution Network inspired by <a href='https://github.com/rusty1s/pytorch_geometric/blob/master/examples/proteins_topk_pool.py'>this architecture</a> (<a href="images/gcn_diagram.png">figure</a>). We also train a two-layers neural network on a simple binary embedding of graph nodes as a baseline.</p>
 
           <p><br> The challenge of representing graphs does not end there, as we can materialize the idea expressed so far in multiple ways: </p>
           <ul>
@@ -135,9 +143,9 @@
 
             <div  style="text-align:center">
               <br><br>
-              <img src="images/graphs.png" alt="Graph representations" width="70%"/>
+              <img src="images/graphs.png" alt="Graph representations" width="70%"/><br><br>
             </div>
-            <div style="text-align:center; color:#333">
+            <div style="text-align:justify; color:#333">
               Several potential representations of word graphs: (a) every word in the vocabulary and  every  potential tag  are nodes that  are directly  linked  to the  central  node (b) the context nodes are connected in the same order as they appear in the sentence, and the relations to the node are explicitly differentiated (as seen by the color of the edges)  (c)  the  same  representation  but  with  the  tags  added  as  node  features  to  the central  node,  not  as  nodes  themselves,  i.e.  only  words  are  modeled  as  nodes  in  this representation.
             </div>
           </div>
@@ -166,7 +174,7 @@
                 <tr><td>LUKE [<a href="https://openreview.net/forum?id=_p9NAzg7ucE">*</a>]</td><td></td><td></td><td></td><td> <b>94.3</b> </td></tr>
               </table>
 
-            <p>We observe a significant decrease in performance for all models between the evaluation and test sets (with a varying intensity depending on thechoice of the model) that is probably due to the fact that the test set contains a lot of out-of-vocabulary words that do not appear in the training set. Thus, they  lack  a  node  representation  that  we  can  feed  to  the  network  in  inference time. We also see that adding the external knowledge consistently improve theperformance of the graph models on both Micro-F1 and Macro-F1 for all models considered. Finally, while the performance on the test set for all graph-onlymode ls is still behind LUKE, the best performing state of the art NER model on ConLL-2003, we observe that these models are significantly smaller and thus faster  to  train  (in  matters  of  minutes  once  the  graph  embeddings  are  gener-ated),  when  using  a  simple  2-layers  feed-forward  neural  as  a  classifier.</p>
+            <p>We observe a significant decrease in performance for all models between the evaluation and test sets (with a varying intensity depending on thechoice of the model) that is probably due to the fact that the test set contains a lot of out-of-vocabulary words that do not appear in the training set. Thus, they  lack  a  node  representation  that  we  can  feed  to  the  network  in  inference time. We also see that adding the external knowledge consistently improve theperformance of the graph models on both Micro-F1 and Macro-F1 for all models considered. Finally, while the performance on the test set for all graph-onlymode ls is still behind <a href="https://openreview.net/forum?id=_p9NAzg7ucE">LUKE</a>, the best performing state of the art NER model on ConLL-2003, we observe that these models are significantly smaller and thus faster  to  train  (in  matters  of  minutes  once  the  graph  embeddings  are  gener-ated),  when  using  a  simple  2-layers  feed-forward  neural  as  a  classifier.</p>
             <p>These preliminary results show promising directions for additional investigations and improvements, of which we note:</p>
             <ul>
               <li>Adding linguistic representations as features to the nodes (e.g. word embeddings)</li>
@@ -183,7 +191,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts-projects.js"></script>
+    <script src="js/scripts-projects2.js"></script>
 
   </body>
 </html>
