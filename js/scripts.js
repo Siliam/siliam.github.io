@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	$('#projects_brief .content').hide();
-	$('#projects_section .project').hide();
+	// $('#projects_brief .content').hide();
+	// $('#projects_section .project').hide();
 	
 	$('.show_brief').click(function(){
 		if($('.show_brief i').hasClass('on'))
