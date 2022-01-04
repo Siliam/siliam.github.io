@@ -1,17 +1,24 @@
 $(document).ready(function(){
-	$('#projects_brief .content').hide();
-	$('#projects_section .project').hide();
+
+	$("a[href='#landing']").click(function() {
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		return false;
+	});
+
+	
+	$('#research_brief .content').hide();
+	$('#research_section .project').hide();
 	
 	$('.show_brief').click(function(){
 		if($('.show_brief i').hasClass('on'))
 		{
 			$('.show_brief i').removeClass('on').addClass('off');
-			$('#projects_brief .content').slideUp();	
+			$('#research_brief .content').slideUp();	
 		}
 		else
 		{
 			$('.show_brief i').removeClass('off').addClass('on');
-			$('#projects_brief .content').slideDown();	
+			$('#research_brief .content').slideDown();	
 		}
 	});
 
@@ -25,7 +32,7 @@ $(document).ready(function(){
 		if($('.show_brief i').hasClass('on'))
 		{
 			$('.show_brief i').removeClass('on').addClass('off');
-			$('#projects_brief .content').slideUp();	
+			$('#research_brief .content').slideUp();	
 		}
 		
 		$('.show_section i').each(function(){
@@ -83,6 +90,9 @@ $(document).ready(function(){
 		$('html, body').animate({ scrollTop: $("#landing").offset().top }, 100);
 	});
 	*/
+	
+
+    /* $('.carousel').carousel('pause'); */
 
 	var form = $('#contactFrom');
 	form.submit(function(e) {
@@ -111,3 +121,32 @@ $(document).ready(function(){
 	});
 
 });
+
+
+function shuffle(e, cid) {               // pass the divs to the function
+    var replace = $('<div>');
+    replace['class'] = 'carousel-inner'
+    var size = e.size();
+
+    $(cid+' .item:first').addClass('active')
+
+    while (size >= 1) {
+       var rand = Math.floor(Math.random() * size);
+       var temp = e.get(rand);      // grab a random div from our set
+       replace.append(temp);        // add the selected div to our new set
+       e = e.not(temp); // remove our selected div from the main set
+       size--;
+    }
+
+
+    $(cid).html(replace.html() );     // update our container div with the
+                                             // new, randomized divs
+	// $(cid)
+}
+
+shuffle( $('#MoviesCarousel .carousel-inner .item'), "#MoviesCarousel .carousel-inner" );
+shuffle( $('#GamesCarousel .carousel-inner .item'), "#GamesCarousel .carousel-inner" );
+shuffle( $('#AnimeCarousel .carousel-inner .item'), "#AnimeCarousel .carousel-inner" );
+shuffle( $('#SeriesCarousel .carousel-inner .item'), "#SeriesCarousel .carousel-inner" );
+shuffle( $('#BooksCarousel .carousel-inner .item'), "#BooksCarousel .carousel-inner" );
+shuffle( $('#AlbumsCarousel .carousel-inner .item'), "#AlbumsCarousel .carousel-inner" );

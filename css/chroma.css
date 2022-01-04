@@ -13,7 +13,7 @@ body
 	font-family: "Open Sans", sans-serif;
 	text-decoration: none;
 	height: 100%;
-	min-width: 650px;
+	min-width: 700px;
 }
 
 a, a:hover, a:focus, a:active
@@ -55,9 +55,13 @@ acronym
 .animate4 {
 	animation: animate-four 1s linear both infinite;	
 }
+.animate5 {
+	animation: beating 2s ease both infinite;	
+}
 .animated {
 	animation: animated 2s ease both infinite;	
 }
+
 .upndown1 {
 	position: relative;
 	bottom: 10px;
@@ -83,11 +87,11 @@ acronym
 	100% 	{ transform: scale(0.95); }
 }
 @keyframes animate-one {
-	0%	 	{ box-shadow: 0 0 6px rgba(64,19,153,0.7); }
+	0%	 	{ box-shadow: 0 0 6px rgba(17,140,120,0.7); }
 	25%		{ transform: rotate(-5deg);  }
-	50% 	{ box-shadow: 0 0 10px rgba(64,19,153,1); }
+	50% 	{ box-shadow: 0 0 10px rgba(17,140,120,1); }
 	75%		{ transform: rotate(5deg); }
-	100% 	{ box-shadow: 0 0 6px rgba(64,19,153,0.7); }
+	100% 	{ box-shadow: 0 0 6px rgba(17,140,120,0.7); }
 }
 @keyframes animate-two {
 	0%	 	{ box-shadow: 0 0 4px rgba(19,77,153,0.7); transform: rotate(-10deg); }
@@ -116,6 +120,14 @@ acronym
 @keyframes rock {
 	50%	{ transform: rotate(30deg);  }
 	0%,100%	{ transform: rotate(0deg); }
+}
+
+@keyframes beating {
+	0% 		{ transform: scale(1.); }
+	10% 	{ transform: scale(1.1); }
+	50% 	{ transform: scale(0.9); }
+	60% 	{ transform: scale(1.1); }
+	100% 	{ transform: scale(1.); }
 }
 
 .shaking:hover
@@ -173,6 +185,7 @@ acronym
 
 }
 
+/*
 .id_image:hover
 {
 	background: url("../images/me.png") 0px -150px no-repeat;
@@ -181,6 +194,7 @@ acronym
     transform: rotate(0deg);
 
 }
+*/
 
 .section
 {
@@ -198,9 +212,10 @@ acronym
 {
 	width: 100%;
 	height: 60%;
-	margin-top: 10%;
+	/*margin-top: 10%;*/
 	text-align: center;
 }
+
 #mainmenu .logo-line
 {
 	margin: 20px 0;
@@ -268,50 +283,50 @@ a.circlelink span
 
 a.cvlink span
 {
-	color: #401299;
+	color: #10878d;
 }
 
 .cvlink .circle
 {
-	background: #401399;
+	background: #1f9d7f;
 	padding-right: 10px;
-	box-shadow: 0 0px 8px rgba(64,19,153,0.8);
+	box-shadow: 0 0px 8px rgba(17,140,120,0.8);
 	padding-left: 4px;
 }
 
 .projectslink .circle
 {
-	background: #134d99;
-	padding-right: 15px;
+	background: #2462c0;
+	/* padding-right: 15px; */
 	box-shadow: 0 0px 8px rgba(19,77,153,0.8);
 	padding-left: 4px;
 }
 
 a.projectslink span
 {
-	color: #134d99;
+	color: #2462c0;
 }
 
 .raqlink .circle
 {
-	background: #99133d;
+	background: #c30020;
 	box-shadow: 0 0px 8px rgba(153,19,61,0.8);
 }
 
 a.raqlink span
 {
-	color: #99133d;
+	color: #c30020;
 }
 
 .contactlink .circle
 {
-	background: #993f13;
+	background: #fcd400;
 	box-shadow: 0 0px 8px rgba(153,63,19,0.8);
 }
 
 a.contactlink span
 {
-	color: #993f13;
+	color: #fcd400;
 }
 
 .section_header
@@ -360,19 +375,19 @@ a.contactlink span
 
 .toplink1 i
 {
-	color: #401399;
+	color: #1f9d7f;
 }
 .toplink2 i
 {
-	color: #134d99;
+	color: #2462c0;
 }
 .toplink3 i
 {
-	color: #99133d;
+	color: #c30020;
 }
 .toplink4 i
 {
-	color: #993f13;
+	color: #fcd400;
 }
 
 .toplink .glyphicon-send
@@ -402,13 +417,13 @@ a.contactlink span
 
 #cv
 {
-	background-color: #401399;
+	background-color: #1f9d7f; /*401399*/
 }
 
 #cv .col 
 {
 	background: white;
-	color: #401399;
+	color: #1f9d7f;
 	border: 2px #888 dashed;
 	border-radius: 8px;
 	margin: 30px 0 10px;
@@ -423,14 +438,14 @@ a.contactlink span
 #cv .personal_info td, #cv .personal_info th
 {
 	font-size: 16px;
-	color: #220756;
+	color: #07585d;
 	padding: 5px 5px 5px 10px;
 	vertical-align: top;
 }
 
 #cv .personal_info a
 {
-	color: #124d99;
+	color: #0f8d5f;
 	font-size: 14px;
 	font-weight: bold;
 }
@@ -447,23 +462,27 @@ a.contactlink span
 	font-size: 14px;
 	font-weight: bold;
 }
+#cv .education_info .extra-info .itemized
+{
+	list-style: square;
+}
 #cv .education_info .school
 {
 	padding-top: 7px;
 	padding-left: 30px;
-	color: #281154;
+	color: #197483;
 	font-size: 14px;
 	font-weight: bold;
 }
 #cv .education_info .period
 {
 	padding-left: 30px;
-	color: #281154;
+	color: #197483;
 }
 #cv .education_info .extra-info
 {
 	font-size: 12px;
-	color: #5c556a;
+	color: #4e6e6f;
 	font-weight: bold;
 }
 #cv .education_info .extra-info ul
@@ -487,6 +506,13 @@ a.contactlink span
 	font-size: 18px;
 	font-weight: bold;
 }
+#cv .internships_info .topic, #cv .education_info .option
+{
+	padding: 5px 15px;
+	font-size: 16px;
+	font-weight: bold;
+	color:#065457;
+}
 #cv .internships_info .host
 {
 	padding-left: 30px;
@@ -496,12 +522,12 @@ a.contactlink span
 #cv .internships_info .period
 {
 	padding-left: 30px;
-	color: #281154;
+	color: #197483;
 }
 #cv .internships_info .extra-info
 {
 	font-size: 12px;
-	color: #5c556a;
+	color: #4e6e6f;
 	font-weight: bold;
 }
 #cv .internships_info .extra-info ul
@@ -511,26 +537,27 @@ a.contactlink span
 #cv .internships_info .extra-info ul li:before {
     content: "♦ ";
     font-size: 14px;
-    color: #124d99;
+    color: #0f8d5f;
 }
 #cv .internships_info .extra-info ul li b
 {
-    color: #124d99;
+    color: #0f8d5f;
 }
 #cv .skills_info td, #cv .skills_info th
 {
 	font-size: 14px;
-	color: #220756;
+	color: #07585d;
 	padding: 8px 5px 5px 15px;
 	vertical-align: top;
 }
 #cv .skills_info td
 {
 	font-size: 12px;
-	color: #5c556a;
+	color: #4e6e6f;
 	font-weight: bold;
 }
 
+/*
 .landing_anchor
 {
 	display: block;
@@ -538,6 +565,16 @@ a.contactlink span
 	height: 50px;
 	background: url('../images/logo_icon.png') center center no-repeat;
 	float: right;
+	margin: -20px -20px 0 0;
+} 
+*/
+
+.landing_anchor i
+{
+	display: block;
+	color: white;
+	float: right;
+	font-size: 30px;
 	margin: -20px -20px 0 0;
 } 
 
@@ -564,12 +601,12 @@ a.contactlink span
 	}
 }
 
-#projects
+#research
 {
-	background: #134d99;
+	background: #2462c0; /*134d99*/
 }
 
-#projects #projects_brief
+#research #research_brief
 {
 	background: rgba(0, 0, 0, 0.2);
 	border: 1px #888 dashed;
@@ -577,23 +614,23 @@ a.contactlink span
 	padding: 25px 25px 20px 25px;
 	margin: 40px 0px 20px;
 }
-#projects #projects_brief p
+#research #research_brief p
 {
 	font-size: 17px;
 	margin-top: 10px;
 	padding-left: 30px;
 }
-#projects #projects_brief a
+#research #research_brief a
 {
 	color: white;
 	text-decoration: underline;
 }
-#projects #projects_brief h3
+#research #research_brief h3
 {
 	margin: 2px 0px 4px;
 	font-size: 35px;
 }
-#projects #projects_brief h3 i
+#research #research_brief h3 i
 {
 	cursor: pointer;
 	color: #eee;
@@ -611,11 +648,11 @@ a.contactlink span
 	top: -4px;
 	border: 2px solid #eee;
 }
-#projects #projects_section h2
+#research #research_section h2
 {
 	padding-left: 30px;
 }
-#projects #projects_section h2 i
+#research #research_section h2 i
 {
 	cursor: pointer;
 	color: #ddd;
@@ -634,96 +671,97 @@ a.contactlink span
 	background: rgba(0,0,0, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.2);
 }
-#projects #projects_section .project
+#research #research_section .project
 {
 	background: white;
-	color: #124d99;
+	color: #1c4e9a;
 	border: 2px #888 dashed;
 	border-radius: 8px;
 	margin: 20px 0 10px;
 	padding: 30px;
 }
-#projects #projects_section .project .row
+#research #research_section .project .row
 {
 	margin-bottom: 20px;
 }
 
-#projects #projects_section .project h3
+#research #research_section .project h3
 {
 	font-weight: bold;
 	margin-bottom: 15px;
 }
-#projects #projects_section .project .sidebox
+#research #research_section .project .sidebox
 {
 	background: rgba(19,77,153, 0.1);
-	color: #124d99;
+	color: #1c4e9a;
 	border: 1px #aaa dashed;
 	border-radius: 8px;
-	padding: 8px 20px;
+	margin-top: 30px;
+	padding: 8px 15px;
 }
-#projects #projects_section .project .sidebox h3
+#research #research_section .project .sidebox h3
 {
 	font-size: 16px;
 }
-#projects #projects_section .project .sidebox b
+#research #research_section .project .sidebox b
 {
 	display: inline-block;
 	color: white;
 	font-size: 12px;
 	border-radius: 4px;
-	background: rgba(153,19,61, 0.9);
+	background: rgba(180,34,34, 0.9);
 	border: 1px solid rgba(153,19,61, 0.2);
 	padding: 2px 5px;
 	margin: 2px 0px;
 }
-#projects #projects_section .description p
+#research #research_section .description p
 {
 	color: black;
 	font-size: 16px;
 }
-#projects #projects_section .description ul
+#research #research_section .description ul
 {
 	list-style: none;
 	color: black;
 	font-size: 16px;
 }
-#projects #projects_section .description ul li:before {
+#research #research_section .description ul li:before {
     content: "○ ";
-    color: #124d99;
+    color: #0f8d5f;
     position: relative;
     left: -5px;
     top: -1px;
 }
-#projects #projects_section .description ul.no-bullets li:before {
+#research #research_section .description ul.no-bullets li:before {
 	content: "";
 }
-#projects #projects_section .description .no-bullets .glyphicon {
+#research #research_section .description .no-bullets .glyphicon {
 	position: relative;
 	right: 10px;
 }
-#projects #projects_section .comment
+#research #research_section .comment
 {
-	color: #124d99;
+	color: #1c4e9a;
 	font-size: 16px;
 	padding: 20px;
 	background: rgba(19,77,153, 0.1);
 	border-radius: 8px;
 	margin-bottom: 20px;
 }
-#projects #projects_brief .on
+#research #research_brief .on
 {
 	animation: rotate-oneeighty 1s cubic-bezier(.36,.07,.19,.97) both;
 }
-#projects #projects_brief .off
+#research #research_brief .off
 {
 	animation: rotate-anti-oneeighty 1s cubic-bezier(.36,.07,.19,.97) both;
 }
 
-#projects #projects_section .on
+#research #research_section .on
 {  
 	animation: rotate-oneeighty 1s ease both;
 }
-#projects #projects_section .off
+#research #research_section .off
 {  
 	animation: rotate-anti-oneeighty 1s ease both;
 }
@@ -736,17 +774,17 @@ a.contactlink span
 	100%	{ transform: rotate(360deg); }
 }
 
-#raq 
+#faves 
 {
-	background: #99133d;
+	background: #c30020; /*99133d*/
 }
 
-#raq .questions
+#faves .questions
 {
 	padding: 30px 20px ;
 }
 
-#raq .questions .q
+#faves .questions .q
 {
 	border-radius: 12px;
 	background: rgba(0,0,0, 0.1);
@@ -754,12 +792,12 @@ a.contactlink span
 	padding: 30px;
 	margin: 20px 0px;
 }
-#raq .questions .q p
+#faves .questions .q p
 {
 	width: 90%;
 	margin: auto;
 }
-#raq .questions i, #raq .questions b  /* shorthand for questions and answers, respectively */
+#faves .questions i, #faves .questions b  /* shorthand for questions and answers, respectively */
 {
 	font-weight: normal;
 	font-style: normal;
@@ -767,28 +805,28 @@ a.contactlink span
 	display: block;
 	padding-left: 3px;
 }
-#raq .questions i
+#faves .questions i
 {
 	font-size: 20px;
 }
-#raq .questions .q a
+#faves .questions .q a
 {
-	color: white;
-	border-bottom: 1px dashed #e15481;
+	/* color: white;
+	border-bottom: 1px dashed #e15481; */
 }
 
-#raq .questions i
+#faves .questions i
 {
     color: #3c0013;
     text-shadow: 0 0 1px #350112;
 }
-#raq .questions i:before
+#faves .questions i:before
 {    
 	content: "Q:  ";
     font-style: normal;
     color: #3c0013;
 }
-#raq .questions b:before
+#faves .questions b:before
 {
 	font-weight: normal;
 	content: "A:  ";
@@ -797,7 +835,7 @@ a.contactlink span
 
 #contact
 {
-	background: #993f13;
+	background: #fcd400; /*993f13*/
 }
 #contact .contact_form
 {
@@ -830,7 +868,7 @@ a.contactlink span
 	border-radius: 5px;
 	border: 0;
 	padding: 15px 0;
-	background: #99123d;
+	background: #c30020;
 	border-bottom:  #8a1037 3px solid;
 	margin-top: 10px;
 	font-weight: bold;
@@ -863,4 +901,149 @@ a.contactlink span
 	background: #991010;
 	border-color: #5d0e0e;
 	box-shadow: 0px 0px 3px rgba(95,15,15, 0.4);
+}
+
+
+
+/* Gallery */
+.lightbox-gallery {
+    color: #000;
+    overflow-x: hidden
+}
+
+.lightbox-gallery p {
+    color: #fff
+}
+
+.lightbox-gallery h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: #fff
+}
+
+@media (max-width:767px) {
+    .lightbox-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+
+.lightbox-gallery .photos {
+    padding-bottom: 20px
+}
+
+
+.lightbox-gallery img {
+    width: 100px;
+}
+
+.lightbox-gallery .item {
+    padding-bottom: 30px
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+/**/
+
+.carousel h3
+{
+	background-color: rgba(0,0,0, 0.25);
+	padding: 5px 0px;
+	width: 100%;
+}
+
+#faves h2
+{
+	margin: -10px 0px 20px 0px;
+}
+
+.carousel p
+{
+	background-color: rgba(0,0,0, 0.25);
+}
+
+
+.carousel h3 a
+{
+	border: 0px;
+	font-weight: bold;
+}
+
+
+.carousel .carousel-caption
+{
+	top: 20px;
+}
+
+#faves h2
+{
+	text-align: center;
+}
+
+
+#faves a
+{
+	color: #fcd400;
+}
+
+#faves .carousel
+{
+	border: 5px rgba(250, 250, 210, 0.2) solid;
+	border-radius: 8px;
+}
+
+
+#faves .carousel .item a
+{
+	color: white;
+}
+
+#faves .questions .q p
+{
+	color: #fafad2;
+	line-height: 1.3em;
+}
+
+
+#research #research_section .project i
+{
+	font-weight: bold;
+	font-size: 0.8em;
+	color:#32527e;
+}
+
+
+#research #research_section .project i b
+{
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #4b8fdd;
+}
+
+.cv_icon:hover
+{
+	color:#1e9d7e;
+}
+
+.research_icon:hover
+{
+	color:#2362c0;
+}
+
+.faves_icon:hover
+{
+	color:#c30020;
+}
+
+.contact_icon:hover
+{
+	color:#fcd400;
 }
