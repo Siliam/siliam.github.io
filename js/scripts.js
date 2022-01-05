@@ -5,7 +5,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-	
+
 	$('#research_brief .content').hide();
 	$('#research_section .project').hide();
 	
@@ -143,6 +143,11 @@ function shuffle(e, cid) {               // pass the divs to the function
                                              // new, randomized divs
 	// $(cid)
 }
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 
 shuffle( $('#MoviesCarousel .carousel-inner .item'), "#MoviesCarousel .carousel-inner" );
 shuffle( $('#GamesCarousel .carousel-inner .item'), "#GamesCarousel .carousel-inner" );

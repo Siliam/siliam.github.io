@@ -198,7 +198,9 @@ acronym
 
 .section
 {
-	min-height: 100%;
+	min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	min-height: calc(var(--vh, 1vh) * 100);
+	min-width: 100%;
 	padding: 40px;
 	color: white;
 }
@@ -342,7 +344,7 @@ a.contactlink span
 .col-stack
 {
 	display: block;
-	height: 190px;
+	height: 180px;
 }
 
 .toplink i
@@ -796,6 +798,7 @@ a.contactlink span
 {
 	width: 90%;
 	margin: auto;
+	font-size: 1.5em;
 }
 #faves .questions i, #faves .questions b  /* shorthand for questions and answers, respectively */
 {
@@ -945,11 +948,18 @@ a.contactlink span
 }
 
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
+	min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	min-height: calc(var(--vh, 1vh) * 100);
+	/*min-width: 100%*/;
 
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
+}
+.vertical-center-2 {
+	min-height: 80vh; /* Fallback for browsers that do not support Custom Properties */
+	min-height: calc(var(--vh, 1vh) * 80);
+	display: flex;
+	align-items: center;
 }
 /**/
 
