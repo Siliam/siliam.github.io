@@ -344,7 +344,7 @@ a.contactlink span
 .col-stack
 {
 	display: block;
-	height: 180px;
+	height: 155px;
 }
 
 .toplink i
@@ -537,7 +537,7 @@ a.contactlink span
 	list-style: none;
 }
 #cv .internships_info .extra-info ul li:before {
-    content: "♦ ";
+    content: "● ";
     font-size: 14px;
     color: #0f8d5f;
 }
@@ -1064,6 +1064,21 @@ a.contactlink span
 }
 
 @media (max-width:767px) {
+	.section{
+		padding-top: 5px;
+	}
+	.landing_anchor i{
+		margin: 10px 5px 0px 0px;
+	}
+	.id_image{
+		width: 120px;
+		height: 120px;
+		background-position: -10px -20px;
+	}
+
+	.footnote {
+		display: none;
+	}
 	#faves p {
 		font-size: 1.2em;
 	}
