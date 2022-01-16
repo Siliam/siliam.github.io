@@ -657,7 +657,7 @@ a.contactlink span
 #research #research_section h2 i
 {
 	cursor: pointer;
-	color: #ddd;
+	color: #fcd400;
 	display: inline-block;
 	border-radius: 15px;
 	height: 30px;
@@ -794,11 +794,16 @@ a.contactlink span
 	padding: 30px;
 	margin: 20px 0px;
 }
+
+#faves p
+{
+	font-size: 1.1em;
+}
+
 #faves .questions .q p
 {
-	width: 90%;
 	margin: auto;
-	font-size: 1.5em;
+	font-size: 1.1em;
 }
 #faves .questions i, #faves .questions b  /* shorthand for questions and answers, respectively */
 {
@@ -1056,4 +1061,31 @@ a.contactlink span
 .contact_icon:hover
 {
 	color:#fcd400;
+}
+
+@media (max-width:767px) {
+	#faves p {
+		font-size: 1.2em;
+	}
+	#faves .questions .q p{
+		font-size: 1.2em;
+
+	}
+	#faves .questions{
+		padding: 20px 0px;
+	}
+	.section{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#cv .col, #faves .col, #research .col{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#contact .contact_form{
+		padding: 5px;
+	}
+	#contact .contact_form .row{
+		padding: 10px 0px;
+	}
 }
