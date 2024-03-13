@@ -1,3 +1,38 @@
+:root
+{
+	--color1: #1f9d7f;
+	--color2: #1b65d3;
+	--color3: #fcd400;
+	--color4: #d42e73;
+	--color5: #8135df;
+
+	--color12: #008f7cc0;
+	--color22: #006a8dc0;
+	--color32: #8b7900c0;
+	--color42: #8f0056c0;
+	--color52: #5e3194c0;
+
+	--bg-url: url("../images/bg6.png");
+}
+
+/*
+:root
+{
+	--color1: #1D4E89;
+	--color2: #00B2CA;
+	--color3: #7DCFB6;
+	--color4: #FBD1A2;
+	--color5: #F79256;
+}
+*/
+
+/* Original Colors
+	--color1: #1f9d7f;
+	--color2: #2462c0;
+	--color3: #c30020;
+	--color4: #fcd40;
+*/
+
 *
 {
 	box-sizing:border-box;
@@ -58,6 +93,9 @@ acronym
 .animate5 {
 	animation: beating 2s ease both infinite;	
 }
+.animate6 {
+	animation: rotation 3s linear both infinite;	
+}
 .animated {
 	animation: animated 2s ease both infinite;	
 }
@@ -71,6 +109,12 @@ acronym
 	position: relative;
 	bottom: 10px;
 	animation: updown-two 2s cubic-bezier(.36,.07,.19,.97) both infinite;
+}
+
+.upndown1 {
+	position: relative;
+	bottom: 10px;
+	animation: updown-one 2s cubic-bezier(.36,.07,.19,.97) both infinite;
 }
 
 @keyframes updown-one {
@@ -128,6 +172,12 @@ acronym
 	50% 	{ transform: scale(0.9); }
 	60% 	{ transform: scale(1.1); }
 	100% 	{ transform: scale(1.); }
+}
+
+@keyframes rotation {
+	0% 		{ transform: rotate(0deg); }
+	50% 	{ transform: rotate(180deg); }
+	100% 	{ transform: rotate(360deg); }
 }
 
 .shaking:hover
@@ -198,6 +248,7 @@ acronym
 
 .section
 {
+	box-shadow: 0px 0px 10px 0px black;
 	min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
 	min-height: calc(var(--vh, 1vh) * 100);
 	min-width: 100%;
@@ -207,7 +258,9 @@ acronym
 
 #landing 
 {
-	position: relative;
+	/* position: relative; */
+	/*background-color: #f4f5e9;*/
+	background-image: var(--bg-url);
 }
 
 #mainmenu
@@ -231,9 +284,16 @@ acronym
 a.circlelink
 {
 	display: block;
-	width: 140px;
-	height: 140px;
+	max-width: 140px;
+	max-height: 140px;
+	width: 10%;
+	min-height: 80px;
 	margin: auto;
+}
+a.circlelink span
+{
+	display: block;
+	width: 120px;
 }
 
 a.circlelink:hover span
@@ -290,45 +350,57 @@ a.cvlink span
 
 .cvlink .circle
 {
-	background: #1f9d7f;
+	background: var(--color1);
 	padding-right: 10px;
-	box-shadow: 0 0px 8px rgba(17,140,120,0.8);
+	box-shadow: 0 0px 8px var(--color12);
 	padding-left: 4px;
 }
 
-.projectslink .circle
+.researchlink .circle
 {
-	background: #2462c0;
+	background: var(--color2);
 	/* padding-right: 15px; */
-	box-shadow: 0 0px 8px rgba(19,77,153,0.8);
+	box-shadow: 0 0px 8px var(--color22);
 	padding-left: 4px;
 }
 
-a.projectslink span
+a.researchlink span
 {
-	color: #2462c0;
+	color: var(--color22);
 }
 
 .raqlink .circle
 {
-	background: #c30020;
-	box-shadow: 0 0px 8px rgba(153,19,61,0.8);
+	background: var(--color4);
+	box-shadow: 0 0px 8px var(--color42);
 }
+
 
 a.raqlink span
 {
-	color: #c30020;
+	color: var(--color42);
+}
+
+.projectslink .circle
+{
+	background: var(--color3);
+	box-shadow: 0 0px 8px var(--color32);
+}
+
+a.projectslink span
+{
+	color: var(--color32);
 }
 
 .contactlink .circle
 {
-	background: #fcd400;
-	box-shadow: 0 0px 8px rgba(153,63,19,0.8);
+	background: var(--color5);
+	box-shadow: 0 0px 8px var(--color52);
 }
 
 a.contactlink span
 {
-	color: #fcd400;
+	color: var(--color42);
 }
 
 .section_header
@@ -377,19 +449,23 @@ a.contactlink span
 
 .toplink1 i
 {
-	color: #1f9d7f;
+	color: var(--color1);
 }
 .toplink2 i
 {
-	color: #2462c0;
+	color: var(--color2);
 }
 .toplink3 i
 {
-	color: #c30020;
+	color: var(--color4);
 }
 .toplink4 i
 {
-	color: #fcd400;
+	color: var(--color5);
+}
+.toplink5 i
+{
+	color: var(--color3);
 }
 
 .toplink .glyphicon-send
@@ -414,18 +490,19 @@ a.contactlink span
 	color: #555;
 	text-align: center;
 	position: relative;
-	top: -160px;
+	top: -200px;
 }
 
 #cv
 {
-	background-color: #1f9d7f; /*401399*/
+	background-color: var(--color1); /*401399*/
+	background-image: var(--bg-url);
 }
 
 #cv .col 
 {
 	background: white;
-	color: #1f9d7f;
+	color: var(--color1);
 	border: 2px #888 dashed;
 	border-radius: 8px;
 	margin: 30px 0 10px;
@@ -605,7 +682,8 @@ a.contactlink span
 
 #research
 {
-	background: #2462c0; /*134d99*/
+	background: var(--color2); /*134d99*/
+	background-image: var(--bg-url);
 }
 
 #research #research_brief
@@ -657,7 +735,7 @@ a.contactlink span
 #research #research_section h2 i
 {
 	cursor: pointer;
-	color: #fcd400;
+	color: var(--color3);
 	display: inline-block;
 	border-radius: 15px;
 	height: 30px;
@@ -711,7 +789,7 @@ a.contactlink span
 	color: white;
 	font-size: 12px;
 	border-radius: 4px;
-	background: rgba(180,34,34, 0.9);
+	background: var(--color12);
 	border: 1px solid rgba(153,19,61, 0.2);
 	padding: 2px 5px;
 	margin: 2px 0px;
@@ -776,9 +854,17 @@ a.contactlink span
 	100%	{ transform: rotate(360deg); }
 }
 
+
+#projects
+{
+	background: var(--color3); /*134d99*/
+	background-image: var(--bg-url);
+}
+
 #faves 
 {
-	background: #c30020; /*99133d*/
+	background: var(--color4); /*99133d*/
+	background-image: var(--bg-url);
 }
 
 #faves .questions
@@ -817,11 +903,6 @@ a.contactlink span
 {
 	font-size: 20px;
 }
-#faves .questions .q a
-{
-	/* color: white;
-	border-bottom: 1px dashed #e15481; */
-}
 
 #faves .questions i
 {
@@ -843,8 +924,9 @@ a.contactlink span
 
 #contact
 {
-	background: #fcd400; /*993f13*/
+	background: var(--color5); /*993f13*/
 }
+
 #contact .contact_form
 {
 	background: rgba(0,0,0, 0.1);
@@ -876,7 +958,7 @@ a.contactlink span
 	border-radius: 5px;
 	border: 0;
 	padding: 15px 0;
-	background: #c30020;
+	background: var(--color4);
 	border-bottom:  #8a1037 3px solid;
 	margin-top: 10px;
 	font-weight: bold;
@@ -1006,7 +1088,7 @@ a.contactlink span
 
 #faves a
 {
-	color: #fcd400;
+	color: var(--color3);
 }
 
 #faves .carousel
@@ -1045,22 +1127,27 @@ a.contactlink span
 
 .cv_icon:hover
 {
-	color:#1e9d7e;
+	color:var(--color1);
 }
 
 .research_icon:hover
 {
-	color:#2362c0;
+	color:var(--color2);
+}
+
+.projects_icon:hover
+{
+	color:var(--color3);
 }
 
 .faves_icon:hover
 {
-	color:#c30020;
+	color:var(--color4);
 }
 
 .contact_icon:hover
 {
-	color:#fcd400;
+	color:var(--color5);
 }
 
 @media (max-width:767px) {
@@ -1104,3 +1191,9 @@ a.contactlink span
 		padding: 10px 0px;
 	}
 }
+
+.shadow-separator
+{
+	height: 30px
+}
+

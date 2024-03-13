@@ -36,16 +36,16 @@
         <div id="mainmenu">
           <!--div class="row logo-line"><img src="images/logo_animated.gif" class="img-responsive"></div-->
           <div class="row stack">
-            <div class="col-md-1 d-md-block d-hidden "></div>
+            <div class="col-md-1 col-sm-0 col-xs-0 col-stack"></div>
             <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#cv" class="circlelink cvlink upndown1">
               <i class="circle glyphicon glyphicon-list-alt animate1"></i><br><span>CV</span></a></div>
-            <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#research" class="circlelink researchlink upndown2">
+            <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#research" class="circlelink researchlink upndown1">
               <i class="circle glyphicon glyphicon-duplicate  animate2"></i><br><span>Research</span></a></div>
-            <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#projects" class="circlelink projectslink upndown1">
+            <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#faves" class="circlelink projectslink upndown1">
               <i class="circle glyphicon glyphicon-star-empty animate6"></i><br><span>Projects</span></a></div>
             <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#faves" class="circlelink raqlink upndown2">
               <i class="circle glyphicon glyphicon glyphicon-heart animate5"></i><br><span>Favorites</span></a></div>
-            <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#contact" class="circlelink contactlink upndown1">
+            <div class="col-md-2 col-sm-2 col-xs-12 col-stack"><a href="#contact" class="circlelink contactlink upndown2">
               <i class="circle glyphicon glyphicon-comment animate4"></i><br><span>Contact</span></a></div>
           </div>
         </div>
@@ -53,13 +53,11 @@
       </div>
     </div>
 
-
     <div class="row section" id="cv">
       <h1 class="section_header">
         <a href="#landing" class="landing_anchor"><i class="glyphicon glyphicon-home"></i></a>
         <a href="#cv" class="toplink toplink1 active"><i class="glyphicon glyphicon-list-alt"></i></a>
         <a href="#research" class="toplink toplink1"><i class="glyphicon glyphicon-duplicate animated research_icon"></i></a>
-        <a href="#projects" class="toplink toplink1"><i class="glyphicon glyphicon-star animated projects_icon"></i></a>
         <a href="#faves" class="toplink toplink1"><i class="glyphicon glyphicon-heart animated faves_icon"></i></a-->
         <a href="#contact" class="toplink toplink1"><i class="glyphicon glyphicon-comment animated contact_icon"></i></a>
         <span class="space"></span><span class="section_title"> CV </span>
@@ -96,27 +94,16 @@
               <tr><td class="topic">Natural Language Processing</td></tr>
               <tr><td class="host">Linagora</td></tr>
               <tr><td class="period">May 2022 - Present</td></tr>
-              <tr>
+              <!--tr>
                 <td class="extra-info">
                 <ul>
-                  <li>Large Language Models, fine-tuning, evaluation</li>
-                  <li>Retrieval-Augmented Generation</li>
-                  <li>NLP / Information Extraction</li>                    
-                  <li><b>Technologies :</b> Python, Pytorch, Transformers, SpaCy, Pandas,..</li>
-                </li>
+                  <li>State of the Art & comparison of action recognition models</li>
+                  <li>Studying Transfer Learning under labeled data scarcity</li>
+                  <li>Visualization of learned features / Saliency maps for videos</li>
+                  <li>Semi-supervised action detection and localization</li>
+                  <li><b>Technologies :</b> Python, Tensorflow, Tensorboard, OpenCV
                 </td>
-              </tr>
-
-              <tr><td class="position">Invited Researcher</Acr></td></tr>
-              <tr><td class="topic">Digital Humanities</td></tr>
-              <tr><td class="host">DHLab @ Royal Netherlands Academy of Arts and Sciences</td></tr>
-              <tr><td class="period">February 2022</td></tr>
-              <tr>
-                <td class="extra-info">
-                <ul>
-                  <li>Study of Olfactory Information Extraction from Historical Text</li>
-                </td>
-              </tr>
+              </tr-->
 
               <tr><td class="position">R&D Internship in Computer Vision</td></tr>
               <tr><td class="topic">Studying Transfer Learning for Action Recognition</td></tr>
@@ -139,21 +126,19 @@
               <tr>
                 <td class="extra-info">
                 <ul>
-                  <li>Timeseries analysis, prediction and classification using Deep Learning models (LSTM)</li>
-                  <li>Log Analysis for failure prediction (using statistical and neural models)</li>
-                  <li> Anomaly detection in metrics - Setting up a Big Data environment for metrics storage and processing</li>
-                  <li><b>Technologies :</b> Python, TensorFlow, Keras, Pandas, OpenTSDV, Grafana, Jupyter Notebook</li>
+                  <li><b>Functionalities : </b>Timeseries analysis, prediction and classification using Deep Learning models (LSTM) - Log Analysis for failure prediction (using statistical and neural models) - Anomaly detection in metrics - Setting up a Big Data environment for metrics storage and processing</li>
+                  <li><b>Technologies :</b> Python, TensorFlow, Keras, Pandas, OpenTSDV, Grafana, Jupyter Notebook
                 </td>
               </tr>
 
-              <!--tr><td class="position">Lab Internship</td></tr>
+              <tr><td class="position">Lab Internship</td></tr>
               <tr><td class="topic">Arabic Handwriting Recognition</td></tr>
               <tr><td class="host">LabTIC - National School of Applied Science</td></tr>
               <tr><td class="period">December 2016 - January 2017</td></tr>
               <tr>
                 <td class="extra-info">
                 <ul>
-                  <li>Implementing a Machine Learning system to recognize Arabic handwriting.</li>
+                  <li><b>Functionalities : </b>Implementing a Machine Learning system to recognize Arabic handwriting.</li>
                   <li><b>Technologies :</b> C++, Qt, OpenCV
                 </td>
               </tr>
@@ -162,10 +147,10 @@
               <tr>
                 <td class="extra-info">
                 <ul>
-                  <li>Implementing and measuring performance and error margin for different Optimization methods.</li>
+                  <li><b>Functionalities : </b>Implementing and measuring performance and error margin for different Optimization methods.</li>
                   <li><b>Technologies :</b> Javascript, D3.js
                 </td>
-              </tr-->
+              </tr>
 
 
               <!--tr><td class="position">Web Developer (Summer internship)</td></tr>
@@ -191,7 +176,7 @@
             <h2>Education</h2>
             <table class="education_info">
               <tr><td class="degree">PhD in Data Science</td></tr>
-              <tr><td class="option">Representation, information extraction, and summarization for automatic multimedia understanding [<a href="https://www.eurecom.fr/en/people/harrando-ismail/publications?f%5B0%5D=author_publication_type%3Athesis"><i class="glyphicon glyphicon-link"></i></a>]</td></tr>
+              <tr><td class="option">Representation, information extraction, and summarization for automatic multimedia understanding</td></tr>
               <tr><td class="school">Sorbonne University / EURECOM Data Science Department</td></tr>
               <tr><td class="period">2018-2022</td></tr>
               <tr>
@@ -203,9 +188,11 @@
                     <li>Multimodal Content Summarization</li>
                     <li>Awards and honors:
                       <ul class="itemized">
-                        <li>MediaEval 2019 & 2021 Memorability Task Distinctive Mention</li>
+                        <li>MediaEval 2019 Memorability Task Distinctive Mention</li>
+                        <li>MediaEval 2021 Memorability Task Distinctive Mention</li>
                         <li>MediaEval 2021 Fake News Detection Task Distinctive Mention</li>
-                        <li>TrecVID 2020 & 2021 Video Summarization Task - Best Scoring Participation</li>
+                        <li>TrecVID 2020 Video Summarization Task - Best Scoring Participation</li>
+                        <li>TrecVID 2021 Video Summarization Task - Best Scoring Participation</li>
                       </ul>
                     </li>
                   </ul>
@@ -319,14 +306,13 @@
         </div>
       </div>
     </div>
-    
+
     <div class="row section" id="research">
 
       <h1 class="section_header">
         <a href="#landing" class="landing_anchor"><i class="glyphicon glyphicon-home"></i></a>
         <a href="#cv" class="toplink toplink2"><i class="glyphicon glyphicon-list-alt animated cv_icon"></i></a>
         <a href="#research" class="toplink toplink2 active"><i class="glyphicon glyphicon-duplicate"></i></a>
-        <a href="#projects" class="toplink toplink2"><i class="glyphicon glyphicon-star animated projects_icon"></i></a>
         <a href="#faves" class="toplink toplink2"><i class="glyphicon glyphicon-heart animated faves_icon"></i></a>
         <a href="#contact" class="toplink toplink2"><i class="glyphicon glyphicon-comment animated contact_icon"></i></a>
         <span class="space"></span><span class="section_title"> Research </span>
@@ -619,39 +605,12 @@
           </div>
       </div>
     </div>
-    
-    <div class="row section" id="projects">
 
-      <h1 class="section_header">
-        <a href="#landing" class="landing_anchor"><i class="glyphicon glyphicon-home"></i></a>
-        <a href="#cv" class="toplink toplink5"><i class="glyphicon glyphicon-list-alt animated cv_icon"></i></a>
-        <a href="#research" class="toplink toplink5"><i class="glyphicon glyphicon-duplicate animated research_icon"></i></a>
-        <a href="#projects" class="toplink toplink3 active"><i class="glyphicon glyphicon-star"></i></a>
-        <a href="#faves" class="toplink toplink5"><i class="glyphicon glyphicon-heart animated faves_icon"></i></a>
-        <a href="#contact" class="toplink toplink5"><i class="glyphicon glyphicon-comment animated contact_icon"></i></a>
-        <span class="space"></span><span class="section_title"> Projects </span>
-      </h1>
-
-      <div id="projects_brief">
-        <h1><marquee>Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon!</marquee></h1>
-        <h1><marquee direction="down">Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon!</marquee></h1>
-        <h1><marquee direction="right">Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon!</marquee></h1>
-        <h1><marquee direction="up">Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon!</marquee></h1>
-        <h1><marquee>Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon! Coming soon!</marquee></h1>
-      </div>
-
-            </div>
-          </div>
-      </div>
-    </div>
-
-    
     <div class="row section" id="faves">
       <h1 class="section_header">
         <a href="#landing" class="landing_anchor"><i class="glyphicon glyphicon-home"></i></a>
         <a href="#cv" class="toplink toplink3"><i class="glyphicon glyphicon-list-alt animated cv_icon"></i></a>
         <a href="#research" class="toplink toplink3"><i class="glyphicon glyphicon-duplicate animated research_icon"></i></a>
-        <a href="#projects" class="toplink toplink3"><i class="glyphicon glyphicon-star animated projects_icon"></i></a>
         <a href="#faves" class="toplink toplink3 active"><i class="glyphicon glyphicon-heart"></i></a>
         <a href="#contact" class="toplink toplink3"><i class="glyphicon glyphicon-comment animated  contact_icon"></i></a>
         <span class="space"></span><span class="section_title"> Favorites
@@ -887,21 +846,6 @@
                 <img src="images/movies/aboutelly.jpg" alt="About Elly" style="width:100%;">
                 <div class="carousel-caption">
                   <h3><a href="">About Elly</a></h3>
-                </div>
-              </div>
-
-
-              <div class="item">
-                <img src="images/movies/tar.jpg" alt="Tar" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Tàr</a></h3>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="images/movies/dune2.jpg" alt="Dune: Part II" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Dune: Part II</a></h3>
                 </div>
               </div>
 
@@ -1153,15 +1097,7 @@
               </div>
 
               <div class="item">
-                <img src="images/games/aoe2def.jpg" alt="Inscryption" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Inscryption</a></h3>
-                  <!--p>Say something </p-->
-                </div>
-              </div>
-              
-              <div class="item">
-                <img src="images/games/inscryption.jpeg" alt="Age of Empires II" style="width:100%;">
+                <img src="images/games/aoe2def.jpg" alt="Age of Empires II" style="width:100%;">
                 <div class="carousel-caption">
                   <h3><a href="">Age of Empires II</a></h3>
                   <!--p>Say something </p-->
@@ -1452,13 +1388,6 @@
               </div>
 
               <div class="item">
-                <img src="images/series/bear.jpeg" alt="The Bear" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">The Bear</a></h3>
-                </div>
-              </div>
-
-              <div class="item">
                 <img src="images/series/itcrowd.jpg" alt="The IT Crowd" style="width:100%;">
                 <div class="carousel-caption">
                   <h3><a href="">The IT Crowd</a></h3>
@@ -1540,60 +1469,6 @@
                   <h3><a href="">1984</a></h3>
                 </div>
               </div>
-
-
-              <div class="item">
-                <img src="images/books/master.jpg" alt="The Master and Margarita" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">The Master and Margarita</a></h3>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="images/books/omelas.jpg" alt="The Ones Who Walk Away from Omelas" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">The Ones Who Walk Away from Omelas</a></h3>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="images/books/palefire.jpg" alt="Pale Fire" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Pale Fire</a></h3>
-                </div>
-              </div>
-              
-              <div class="item">
-                <img src="images/books/refuse.jpg" alt="Refuse to Choose" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Refuse to Choose</a></h3>
-                </div>
-              </div>
-
-              <div class="item">
-                <img src="images/books/narcissus.jpg" alt="Narcissus and Goldmund" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Narcissus and Goldmund</a></h3>
-                </div>
-              </div>
-
-              
-              <div class="item">
-                <img src="images/books/rijal.jpg" alt="رجال في الشمس" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">رجال في الشمس</a></h3>
-                </div>
-              </div>
-
-              
-
-              <div class="item">
-                <img src="images/books/destiny.jpg" alt="Destiny Disrupted" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Destiny Disrupted</a></h3>
-                </div>
-              </div>
-
 
               <div class="item">
                 <img src="images/books/algernon.jpg" alt="Flowers for Algernon" style="width:100%;">
@@ -1861,13 +1736,6 @@
               </div>
 
               <div class="item">
-                <img src="images/albums/hellmode.jpeg" alt="Hellmode - Jeff Rosenstock" style="width:100%;">
-                <div class="carousel-caption">
-                  <h3><a href="">Hellmode - Jeff Rosenstock</a></h3>
-                </div>
-              </div>
-
-              <div class="item">
                 <img src="images/albums/alexcameron.jpg" alt="Forced Witness - Alex Cameron" style="width:100%;">
                 <div class="carousel-caption">
                   <h3><a href="">Forced Witness - Alex Cameron</a></h3>
@@ -2057,13 +1925,12 @@
 
       </div>
     </div>
-    
+
     <div class="row section" id="contact">
       <h1 class="section_header">
         <a href="#landing" class="landing_anchor"><i class="glyphicon glyphicon-home"></i></a>
         <a href="#cv" class="toplink toplink4"><i class="glyphicon glyphicon-list-alt animated cv_icon"></i></a>
         <a href="#research" class="toplink toplink4"><i class="glyphicon glyphicon-duplicate animated research_icon"></i></a>
-        <a href="#projects" class="toplink toplink4"><i class="glyphicon glyphicon-star animated projects_icon"></i></a>
         <a href="#faves" class="toplink toplink4"><i class="glyphicon glyphicon-heart animated faves_icon"></i></a>
         <a href="#contact" class="toplink toplink4 active"><i class="glyphicon glyphicon-comment"></i></a>
         <span class="space"></span><span class="section_title"> Contact </span>
