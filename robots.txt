@@ -1,3 +1,7 @@
 User-agent: Googlebot-Image
 Disallow: /images/*/*.png$
 Disallow: /images/*/*.jpg$
+Disallow: /assets/*/*.png$
+Disallow: /assets/*/*.jpg$
+Disallow: /assets/*.jpg$
+Disallow: /assets/*.png$
