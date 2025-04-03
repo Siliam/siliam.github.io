@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Homepage | Ismail Harrando</title>
 
     <link rel="icon" href="assets/imgs/favicon.ico">
@@ -13,8 +14,28 @@
     <link rel="stylesheet" href="assets/css/dark.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/lazy.js"></script>
 </head>
 <body>
+    <!-- Burger menu for small screens -->
+    <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu-items">
+            <li data-target="welcome">Welcome</li>
+            <li data-target="cv">Life so far</li>
+            <li data-target="research">Research</li>
+            <li data-target="favorites">My Favorite Things</li>
+            <li data-target="projects">Projects</li>
+            <li data-target="contact">Contact</li>
+        </ul>
+    </div>
+
     <!-- Navigation Bubbles -->
     <div class="nav-bubbles">
         <div class="nav-bubble active" data-section="Welcome" data-target="welcome">

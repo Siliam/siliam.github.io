@@ -753,4 +753,186 @@ $(document).ready(function() {
       'opacity': '1'
     });
   }, 100);
+
+
+  
+$(window).scroll(function() {
+  let current = '';
+  let scrollPos = $(window).scrollTop();
+  let windowHeight = $(window).height();
+  
+  // Special case for the welcome section at the top
+  if (scrollPos < $('#cv').offset().top - 100) {
+    current = 'welcome';
+  } else {
+    // Check other sections
+    $('section').each(function() {
+      const sectionTop = $(this).offset().top;
+      const sectionHeight = $(this).height();
+      if (scrollPos >= (sectionTop - windowHeight/3)) {
+        current = $(this).attr('id');
+      }
+    });
+  }
+
+  // Update active bubble
+  $('.nav-bubble').removeClass('active');
+  $('.nav-bubble[data-target="' + current + '"]').addClass('active');
 });
+$(window).scroll(function() {
+  let current = '';
+  let scrollPos = $(window).scrollTop();
+  let windowHeight = $(window).height();
+  
+  // Special case for the welcome section at the top
+  if (scrollPos < $('#cv').offset().top - 100) {
+    current = 'welcome';
+  } else {
+    // Check other sections
+    $('section').each(function() {
+      const sectionTop = $(this).offset().top;
+      const sectionHeight = $(this).height();
+      if (scrollPos >= (sectionTop - windowHeight/3)) {
+        current = $(this).attr('id');
+      }
+    });
+  }
+
+  // Update active bubble
+  $('.nav-bubble').removeClass('active');
+  $('.nav-bubble[data-target="' + current + '"]').addClass('active');
+});
+
+// Also make sure this runs on page load to set the initial state
+$(document).ready(function() {
+  // Trigger the scroll event on page load to set initial active state
+  $(window).trigger('scroll');
+});
+
+
+});
+
+
+// Mobile detection
+function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+// Adjust section heights for mobile
+function adjustSectionHeights() {
+  if (isMobile()) {
+    // Allow sections to have natural height on mobile instead of forcing 100vh
+    $('section').css('min-height', 'auto');
+    $('section').css('padding-bottom', '60px'); // Space for the bottom navigation
+    
+    // Specific adjustment for the welcome section to ensure it's at least viewport height
+    $('#welcome').css('min-height', '100vh');
+  } else {
+    // Reset for desktop
+    $('section').css('min-height', '100vh');
+    $('section').css('padding-bottom', '40px');
+  }
+}
+
+// Enhanced mobile carousel handling
+function enhanceMobileCarousels() {
+  if (isMobile()) {
+    // Simplify carousel navigation on mobile with swipe gestures
+    $('.card-carousel-container').each(function() {
+      let startX, endX;
+      const minSwipeDistance = 30;
+      
+      $(this).on('touchstart', function(e) {
+        startX = e.originalEvent.touches[0].clientX;
+      });
+      
+      $(this).on('touchend', function(e) {
+        endX = e.originalEvent.changedTouches[0].clientX;
+        const distance = endX - startX;
+        
+        if (Math.abs(distance) >= minSwipeDistance) {
+          const $card = $(this).closest('.favorite-card');
+          if (distance > 0) {
+            // Swipe right, go to previous
+            $card.find('.card-prev').click();
+          } else {
+            // Swipe left, go to next
+            $card.find('.card-next').click();
+          }
+        }
+      });
+    });
+  }
+}
+
+// Improve scrolling behavior on mobile
+function improveMobileScrolling() {
+  if (isMobile()) {
+    // Smoother scroll to section on mobile
+    $('.nav-bubble').click(function() {
+      const target = $(this).data('target');
+      const offset = $('#' + target).offset().top;
+      
+      $('html, body').animate({
+        scrollTop: offset
+      }, 600);
+      
+      return false;
+    });
+  }
+}
+
+// Toggle research tabs more effectively on mobile
+function mobileResearchTabs() {
+  if (isMobile()) {
+    $('.menu-option').click(function() {
+      // Scroll to content after tab change on mobile
+      setTimeout(function() {
+        const contentTop = $('.jrpg-content').offset().top - 20;
+        $('html, body').animate({
+          scrollTop: contentTop
+        }, 300);
+      }, 300);
+    });
+  }
+}
+
+$(document).ready(function() {
+  // Run mobile adjustments
+  adjustSectionHeights();
+  enhanceMobileCarousels();
+  improveMobileScrolling();
+  mobileResearchTabs();
+  
+  // Re-run on window resize
+  $(window).resize(function() {
+    adjustSectionHeights();
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.add('active');
+    });
+    
+    document.querySelector('.mobile-menu-close').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.remove('active');
+    });
+    
+    // Mobile menu item click
+    document.querySelectorAll('.mobile-menu-items li').forEach(function(item) {
+        item.addEventListener('click', function() {
+            const target = this.getAttribute('data-target');
+            const element = document.getElementById(target);
+            window.scrollTo({
+                top: element.offsetTop,
+                behavior: 'smooth'
+            });
+            
+            document.querySelector('.mobile-menu').classList.remove('active');
+        });
+    });
+});
+

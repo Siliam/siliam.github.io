@@ -523,7 +523,7 @@
           .timeline-item.left .timeline-date, .timeline-item.right .timeline-date {
             right: auto;
             left: 15px;
-            top: -30px;
+            top: 20px;
             font-size: 0.9rem;
           }
           
@@ -909,7 +909,7 @@
         border: 2px solid var(--lavender-dark);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         transition: all 0.3s ease;
-        max-height: 350px; /* Limit card height */
+        max-height: 450px; /* Limit card height */
     }
 
     .favorite-card:hover {
@@ -1541,4 +1541,479 @@ textarea {
     color: var(--background);
     background: var(--teal);
 }
+
+
+
+/* Base responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Navigation bubbles mobile optimization */
+@media (max-width: 768px) {
+  .nav-bubbles {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(26, 14, 18, 0.85);
+    border-top: 2px solid var(--lavender-dark);
+    padding: 10px 0;
+    z-index: 1000;
+    width: 100%;
+    gap: 5px;
+  }
+  
+  .nav-bubble {
+    width: 40px;
+    height: 40px;
+    font-size: 0.8rem;
+  }
+  
+  .nav-bubble::after {
+    display: none; /* Hide tooltips on mobile */
+  }
+}
+
+/* RPG dialogue mobile adjustments */
+@media (max-width: 768px) {
+  .rpg-dialogue-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .avatar-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .dialogue-box {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+  }
+  
+  #dialogue-text {
+    height: auto;
+    min-height: 100px;
+  }
+}
+
+/* Timeline mobile enhancements */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item.right {
+    left: 0;
+  }
+  
+  .timeline-item.left::after,
+  .timeline-item.right::after {
+    left: 15px;
+  }
+  
+  .timeline-date {
+    width: auto;
+    position: relative;
+    top: -10px;
+    left: 0 !important;
+    right: 0 !important;
+    margin-bottom: 10px;
+    text-align: left !important;
+    font-size: 0.9rem;
+  }
+}
+
+/* Research section mobile adjustments */
+@media (max-width: 768px) {
+  .jrpg-menu-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .jrpg-menu, .jrpg-content {
+    width: 100%;
+  }
+  
+  .jrpg-content {
+    height: auto;
+    min-height: 400px;
+    margin-top: 20px;
+  }
+  
+  .paper-item {
+    flex-direction: column;
+  }
+  
+  .paper-icon {
+    margin-bottom: 10px;
+  }
+  
+  /* Ensure Scholar link is properly positioned */
+  .scholar-link {
+    margin: 20px 30px;
+    width: auto;
+    padding: 8px 30px;
+  }
+}
+
+/* Favorites section mobile adjustments */
+@media (max-width: 768px) {
+  .favorites-container {
+    flex-direction: column;
+  }
+  
+  .favorites-column {
+    width: 100%;
+  }
+  
+  /* Improve carousel display on mobile */
+  .card-content {
+    height: auto;
+    min-height: 200px;
+  }
+  
+  .carousel-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .item-image {
+    margin-bottom: 15px;
+    width: 150px;
+    height: 200px;
+  }
+  
+  .item-details {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* Contact form mobile adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 30px 20px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+/* Fix font sizes for better readability on mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  .paper-title-link {
+    font-size: 1rem;
+  }
+  
+  .paper-description {
+    font-size: 0.85rem;
+  }
+  
+  .item-details h4 {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .mobile-menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background-color: var(--lavender-dark);
+        color: var(--text);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1100;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background-color: var(--gold);
+    }
+    
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(26, 14, 18, 0.95);
+        z-index: 1200;
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    .mobile-menu.active {
+        right: 0;
+    }
+    
+    .mobile-menu-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--lavender-dark);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .mobile-menu-items {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .mobile-menu-items li {
+        padding: 15px;
+        border-bottom: 1px solid var(--lavender-dark);
+        color: var(--text);
+        cursor: pointer;
+        font-family: 'JetBrains Mono', monospace;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-menu-items li:hover {
+        background-color: rgba(85, 235, 250, 0.1);
+        color: var(--gold);
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: 481px) {
+    .mobile-menu-toggle, .mobile-menu {
+        display: none;
+    }
+}
+
+
+/* Fix for favorites section arrows */
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: row; /* Ensure row layout is maintained */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .card-nav {
+    position: relative;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0; /* Prevent shrinking */
+    opacity: 1 !important; /* Ensure always visible */
+  }
+  
+  .card-carousel-container {
+    width: calc(100% - 80px); /* Make room for arrows */
+    margin: 0 5px;
+  }
+  
+  .carousel-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 250px; /* Ensure consistent height */
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+  
+  /* Better touch targets for arrows */
+  .card-nav:active {
+    transform: scale(0.95);
+  }
+  
+  /* Make arrows stand out more */
+  .card-nav {
+    background-color: var(--gold);
+  }
+  
+  .card-nav i {
+    color: var(--background);
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 380px) {
+  .card-content {
+    padding: 10px 5px;
+  }
+  
+  .card-nav {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .card-carousel-container {
+    width: calc(100% - 70px);
+  }
+  
+  .item-image {
+    width: 100px;
+    height: 140px;
+  }
+}
+
+/* Improved timeline date positioning on mobile */
+@media (max-width: 768px) {
+  .timeline-item {
+    position: relative;
+    padding-top: 40px; /* Make space for date at top */
+  }
+  
+  .timeline-date {
+    position: absolute;
+    top: 0;
+    left: 70px !important; /* Align with content, not left edge */
+    width: auto;
+    text-align: left !important;
+    background-color: var(--lavender-dark);
+    color: var(--text);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timeline-content {
+    margin-top: 10px;
+  }
+  
+  /* Adjust the vertical line */
+  .timeline::after {
+    left: 31px;
+    top: 40px; /* Start after the first date */
+  }
+  
+  /* Make sure the circles align properly */
+  .timeline-item.left::after, 
+  .timeline-item.right::after {
+    left: 15px;
+    top: 50px; /* Position below the date */
+  }
+  
+  /* Adjust icon positioning */
+  .timeline-item.left .timeline-icon, 
+  .timeline-item.right .timeline-icon {
+    left: 20px;
+    top: 52px; /* Align with the circle */
+  }
+}
+
+/* Extra adjustments for very small screens */
+@media (max-width: 480px) {
+  .timeline-date {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+/* Image loading optimization */
+
+@media (max-width: 768px) {
+  /* Optimize image sizes for mobile */
+  .item-image {
+    width: 120px;
+    height: 160px;
+  }
+  
+  .item-image img {
+    object-fit: cover;
+  }
+  
+  /* Prevent image overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Improve avatar display */
+  #avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Add responsive image handling for retina displays */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+  /* You would ideally create higher resolution versions of your images */
+  /* and use them for retina displays */
+  /* .item-image img {
+      content: url('../imgs/retina/image@2x.jpg');
+  } */
+  
+  /* Since we don't have those files, just enhance the existing ones */
+  .item-image img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+
 
